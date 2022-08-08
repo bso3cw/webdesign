@@ -1,0 +1,78 @@
+@import url(default.css); /*main.css에 default.css 삽입(호출)*/
+header {
+    height: 100px;
+    padding: 0 40px;
+}
+header h1 {
+    float: left;
+    margin: 30px 0 0 0;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    float: left
+}
+header nav ul li {
+    float: left;
+}
+header nav ul li a {
+    display: block;
+    padding: 34px 22px;
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+header nav .market {
+    float: left;
+    display: block;
+    padding: 3px 24px 6px 41px;
+    margin: 32px 0 0 26px;
+    border: 1px solid #13A94F;
+    border-radius: 18px;
+    background-image: url(../images/market_ico.png);
+    background-position: left 17px top 9px;
+    background-repeat: no-repeat;
+    color: #13A94F;
+    font-size: 18px;
+    font-weight: 700;
+}
+.visual {
+    color: #ffffff;
+    padding: 0 40px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.visual .inner {
+    height: 750px;
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.visual strong {
+    display: block; /*strong 인라인 태그에 margin/padding을 주기 위한 값*/
+    padding: 181px 0 0 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+.visual h2 {
+    margin: 0 0 10px 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.category .tit {
+    color: #1d1d1d;
+}
+.category .tit strong {
+    display: block;
+    margin: 120px 0 1px 0;
+    font-weight: 700;
+}
+.category .tit h2 {
+    margin: 0 0 22px 0;
+    line-height: 1; /*strong과 h2 사이의 행간 때문에 발생한 여백 삭제*/
+    font-size: 50px;
+    font-weight: 300;
+}
