@@ -55,12 +55,17 @@ header nav .market {
     padding: 181px 0 0 0;
     font-size: 25px;
     font-weight: 700;
+    letter-spacing: normal;
 }
 .visual h2 {
     margin: 0 0 10px 0;
     font-size: 50px;
     font-weight: 400;
     line-height: 1.1;
+    letter-spacing: normal;
+}
+.visual p {
+    letter-spacing: normal;
 }
 .category .tit {
     color: #1d1d1d;
@@ -69,10 +74,256 @@ header nav .market {
     display: block;
     margin: 120px 0 1px 0;
     font-weight: 700;
+    letter-spacing: normal;
 }
 .category .tit h2 {
     margin: 0 0 22px 0;
     line-height: 1; /*strong과 h2 사이의 행간 때문에 발생한 여백 삭제*/
     font-size: 50px;
     font-weight: 300;
+    letter-spacing: normal;
+}
+.category ul li {
+    float: left;
+    width: 240px;
+    margin: 0 20px 0 0;
+}
+.category ul li:last-child { /*li중에서 마지막 li를 선택*/
+    margin-right: 0;
+}
+.category ul li a {
+    display: block;
+}
+.category ul li a img {
+    width: 100%;
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+}
+.category ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.network {
+    height: 750px;
+    margin: 214px 0 0 0;
+    background-image: url(../images/network_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.network h2 {
+    padding: 232px 0 0 0;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.network p {
+    margin: 3px 0 30px 0;
+    line-height: 1.3;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.network a {
+    display: block;
+    float: left; /*a 사이의 여백 없이 나란히 배치*/
+    padding: 10px 15px;
+    margin: 0 5px 0 0;
+    letter-spacing: normal;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+.community .tit {
+    color: #1d1d1d;
+}
+.community .tit strong {
+    display: block;
+    margin: 102px 0 3px 0;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.community .tit h2 {
+    margin: 0 0 22px 0;
+    line-height: 1; /*strong과 h2 사이의 행간 때문에 발생한 여백 삭제*/
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: normal;
+}
+.community .list .colgroup1 {
+    float: left;
+    width: 630px;
+    margin: 0 20px 0 0;
+}
+.community .list .colgroup2 {
+    float: left;
+    width: 630px;
+}
+.community .list ul li {
+ float: left;
+}
+.community .list ul li a {
+    display: block;
+    width: 305px;
+    height: 224px;
+    letter-spacing: normal;
+    padding: 30px 30px 0 30px;
+    background-color: #F4F4F4;
+}
+.community .list ul li a em {
+    display: block;
+}
+.community .list ul li a strong {
+    display: block;
+    margin: 2px 0 58px 0;
+    font-size: 20px;
+    font-weight: 700;
+    /*제목을 2줄로 제한(고정)하는 스타일*/
+    line-height: 1.5;
+    height: 3em; /*행간*줄수 - 단위는 꼭 em*/
+    overflow: hidden;
+}
+.community .list ul li a .date {
+    display: block;
+    color: #666666;
+}
+.community .list ul li a .date .write {
+    position: relative;
+    padding: 0 15px 0 0;
+}
+.community .list ul li a .date .write::after {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: #999999;
+    content: "";
+}
+.community .list ul li.green a {
+    margin: 0 20px 0 0;
+    background-color: #13A94F;
+    color: #ffffff;
+}
+.community .list ul li.blue a {
+    margin: 0 20px 0 0;
+    background-color: #005BAE;
+    color: #ffffff;
+}
+.community .list ul li.img01 a {
+    width: 630px;
+    height: 410px;
+    margin: 20px 0 0 0;
+    background-image: url(../images/community02.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.community .list ul li.img02 a {
+    width: 630px;
+    height: 410px;
+    margin: 0 0 20px 0;
+    background-image: url(../images/community01.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.community .list ul li.date_w a .date {
+    color: rgba(255,255,255,0.8);
+}
+.community .list ul li.date_w a .date .write::after {
+    background-color: rgba(255,255,255,0.6);
+}
+.community .list ul li.img01 a em, .community .list ul li.img02 a em {
+    margin: 267px 0 0 0;
+}
+.community .list ul li.img01 a strong, .community .list ul li.img02 a strong {
+    margin: 0 0 21px 0;
+    height: auto; /*높이 고정을 해제*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+footer {
+    margin: 138px 0 0 0;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: normal;
+}
+footer .fhead {
+    height: 65px;
+    background-color: #1A1A1A;
+}
+footer .fhead ul {
+    float: left;
+    margin: 5px 0 0 0;
+}
+footer .fhead ul li {
+    float: left;
+}
+footer .fhead ul li.privacy {
+    font-weight: 700;
+}
+footer .fhead ul li a {
+    display: block;
+    position: relative; /*after에 준 absolute의 정렬의 기준*/
+    padding: 16px;
+}
+footer .fhead ul li a::after {
+    display: block;
+    /*after를 감싸는 요소 a에 position 속성이 있기 때문에
+      a를 기준으로 right 오른쪽 top 상단으로 정렬*/
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.4);
+    content: "";
+}
+footer .fhead ul li:first-child a {
+    padding-left: 0;
+}
+footer .fhead ul li:last-child a::after {
+    display: none; /*숨김*/
+}
+footer .fhead .quest {
+    display: block;
+    float: right;
+    padding: 5px 17px;
+    margin: 14px 0 0 0;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+footer .fbody {
+    background-color: #0A0A0A;
+}
+footer .fbody .info {
+    padding: 50px 0 34px 0;
+}
+footer .fbody .info ul li {
+    position: relative;
+    float: left;
+    margin: 0 30px 0 0;
+}
+footer .fbody .info ul li::after {
+    display: block;
+    position: absolute;
+    right: -16px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.4);
+    content: "";
+}
+footer .fbody .info ul li:last-child::after {
+    /*li:last-child::after는 li중에 마지막 li의 after 가상요소*/
+    display: none; /*숨김*/
+}
+footer .fbody .copyright {
+    padding: 0 0 73px 0;
+    color: rgba(255,255,255,0.6);
 }

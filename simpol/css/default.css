@@ -2,6 +2,8 @@
 body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p { /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /*width/height와 padding이 결합되면 사이즈가 늘어남. 이걸 막는 스타일
+                            padding을 줘도 width/height가 유지가 됨*/
 }
 a { /*a태그에 브라우저가 주는 기본 속성 초기화*/
     color: inherit;
@@ -15,6 +17,8 @@ ul, li { /*항목 앞의 동그라미 삭제*/
 }
 
 html, body {
+    min-width: 1280px; /*브라우저에 가로 스크롤이 생성되었을 때, 배경이 잘리지 않기
+                        위해 최소 넓이를 줌*/
     color: #3d3d3d;
     line-height: 1.5;
     font-family: 'Noto Sans KR', sans-serif;
