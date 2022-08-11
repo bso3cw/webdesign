@@ -1,0 +1,118 @@
+@import url(default.css); /*main.css에 default.css 삽입(호출)*/
+
+.category .tit {
+    color: #1d1d1d;
+}
+.category .tit strong {
+    display: block;
+    margin: 120px 0 1px 0;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.category .tit h2 {
+    margin: 0 0 22px 0;
+    line-height: 1; /*strong과 h2 사이의 행간 때문에 발생한 여백 삭제*/
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: normal;
+}
+.category ul li {
+    float: left;
+    width: 240px;
+    margin: 0 20px 0 0;
+}
+.category ul li:last-child { /*li중에서 마지막 li를 선택*/
+    margin-right: 0;
+}
+.category ul li a {
+    display: block;
+}
+.category ul li a img {
+    width: 100%;
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+}
+.category ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+@media screen and (max-width:450px){
+    .category .tit strong {
+        margin: 56px 0 4px 0;
+    }
+    .category .tit h2 {
+        margin: 0 0 30px 0;
+        font-size: 30px;
+    }
+    .category ul li {
+        width: 48%;
+        margin: 0 4% 0 0;
+    }
+    .category ul li:nth-child(2), .category ul li:nth-child(4) {
+        margin-right: 0;
+    }
+    .category ul li:last-child { /*li중에서 마지막 li를 선택*/
+        display: none;
+    }
+    .category ul li a img {
+        width: 100%;
+    }
+    .category ul li a strong {
+        margin: 7px 0 24px 0;
+    }
+} /*media 종료*/
+
+.network {
+    height: 750px;
+    margin: 214px 0 0 0;
+    background-image: url(../images/network_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.network h2 {
+    padding: 232px 0 0 0;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.network p {
+    margin: 3px 0 30px 0;
+    line-height: 1.3;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+.network a {
+    display: block;
+    float: left; /*a 사이의 여백 없이 나란히 배치*/
+    padding: 10px 15px;
+    margin: 0 5px 0 0;
+    letter-spacing: normal;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+
+@media screen and (max-width:450px){
+    .network {
+        height: auto;
+        padding: 0 0 105px 0;
+        margin: 40px 0 0 0;
+    }
+    .network h2 {
+        padding: 65px 0 0 0;
+        font-size: 12px;
+    }
+    .network p {
+        margin: 10px 0 36px 0;
+        line-height: 1.2;
+        font-size: 18px;
+    }
+    .network a {
+        padding: 10px 15px;
+    }
+}
