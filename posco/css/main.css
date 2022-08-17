@@ -156,7 +156,9 @@
         overflow: hidden;
     }
 }
-
+.banner h2 {
+    display: none;
+}
 .banner ul li {
     float: left;
     width: 550px;
