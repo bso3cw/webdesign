@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
-body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p { /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p, i { /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
     padding: 0;
     margin: 0;
     box-sizing: border-box; /*width/height와 padding이 결합되면 사이즈가 늘어남. 이걸 막는 스타일
@@ -15,6 +15,18 @@ em, address { /*브라우저에서 기울임을 주는 것을 초기화*/
 }
 ul, li { /*항목 앞의 동그라미 삭제*/
     list-style: none;
+}
+button {
+    background-color: transparent; /*투명*/
+    border: 0;
+    cursor: pointer; /*마우스 오버 시 손바닥 모양*/
+    color: inherit;
+    font-family: inherit; /*서체 상속 - button은 body에서 적용한 서체를 자동으로 상속 받지 않음
+                            form 관련 태그는 다 그럼*/
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
 }
 
 html, body {
