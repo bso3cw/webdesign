@@ -1,15 +1,15 @@
 @import url(default.css);
 
-header { /*body를 기준으로 정렬*/
+header { /* body를 기준으로 정렬 */
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 100; /*z-index 숫자가 높은 요소가 위에 배치
+    z-index: 100; /* z-index 숫자가 높은 요소가 위에 배치
     하단에 다른 요소가 z-index를 가질 수 있기 때문에
     header를 무조건 상단에 두기 위해 안전하게 100
-    즉, content 영역에 요소는 z-index를 줘도 100 미만의 값을 줘야 함*/
-    width: 100%; /*absolute를 주면 해당 요소는 inline 태그처럼 작동된다.
-    width가 내부 요소가 존재하는 만큼 들어감*/
+    즉, content 영역에 요소는 z-index를 줘도 100 미만의 값을 줘야 함 */
+    width: 100%; /* absolute를 주면 해당 요소는 inline 태그처럼 작동된다.
+    width가 내부 요소가 존재하는 만큼 들어감 */
     height: 100px;
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
@@ -18,19 +18,22 @@ header h1 {
     margin: 31px 192px 0 0;
     font-size: 0;
     line-height: 0;
-    /*로고가 글자 없이 이미지만 존재함
+    /* 로고가 글자 없이 이미지만 존재함
     그래도 글자 크기와 행간 때문에 여백이 발생함
-    이 여백을 없애고 img가 존재하는 만큼만 적용*/
+    이 여백을 없애고 img가 존재하는 만큼만 적용 */
 }
 header h1 a {
     display: block;
+    width: 74px;
+    height: 32px;
+    background: url(../images/logo_w.svg) no-repeat center center / 100%;
 }
 header .gnb {
     float: left;
     margin: 6px 0 0 1px;
 }
 header .gnb button {
-    display: none; /*모바일 열기 버튼*/
+    display: none; /* 모바일 열기 버튼 */
 }
 header .gnb ul li {
     float: left;
@@ -56,9 +59,12 @@ header .tnb button i {
 header .tnb button span {
     display: none;
 }
-header.fixed { /*header가 고정됐을 때 jquery가 class를 추가*/
+header.fixed { /* header가 고정됐을 때 jquery가 class를 추가 */
     position: fixed;
     background-color: #fff;
+}
+header.fixed h1 a {
+    background-image: url(../images/logo.svg);
 }
 header.fixed .gnb ul li a {
     color: #1d1d1d;
@@ -74,15 +80,16 @@ header.fixed .tnb button i {
     header h1 {
         margin: 15px 0 0 0;
     }
-    header h1 a img {
-        width: 34px; /*모바일에서는 로고 사이즈가 변경됨*/
+    header h1 a {
+        width: 34px;
+        height: 15px;
     }
     header .gnb {
         float: right;
         margin: 13px 0 0 1px;
     }
     header .gnb button {
-        display: block; /*모바일 열기 버튼*/
+        display: block; /* 모바일 열기 버튼 */
     }
     header .gnb button i {
         color: #fff;
@@ -93,7 +100,7 @@ header.fixed .tnb button i {
         display: none;
     }
     header .gnb ul {
-        display: none; /*모바일에서는 메뉴가 안 나옴*/
+        display: none; /* 모바일에서는 메뉴가 안 나옴 */
     }
     header .tnb {
     display: none;
@@ -121,7 +128,7 @@ header.fixed .tnb button i {
     background-color: rgba(0,0,0,0.2);
     content: "";
 }
-.visual .inner { /*before 검은 색보다 글자를 위에 배치하기 위해서*/
+.visual .inner { /* before 검은 색보다 글자를 위에 배치하기 위해서 */
     position: relative;
     z-index: 1;
 }
@@ -132,7 +139,7 @@ header.fixed .tnb button i {
     line-height: 1.25;
 }
 .visual h2 span {
-    display: block; /*pc에서만 줄바꿈*/
+    display: block; /* pc에서만 줄바꿈 */
 }
 
 @media screen and (max-width:640px){
@@ -146,10 +153,10 @@ header.fixed .tnb button i {
         text-align: center;
     }
     .visual h2 span {
-        display: inline; /*pc에서만 줄바꿈*/
+        display: inline; /* pc에서만 줄바꿈 */
     }
     .visual p {
-        display: none; /*모바일에서 안 보임*/
+        display: none; /* 모바일에서 안 보임 */
     }
 }
 
@@ -255,7 +262,7 @@ header.fixed .tnb button i {
     .biz .inner {
         width: auto;
     }
-    .biz img { /*img 태그는 넓이나 높이 하나만 주면 비율에 맞게 줄어듦*/
+    .biz img { /* img 태그는 넓이나 높이 하나만 주면 비율에 맞게 줄어듦 */
         width: 100%;
     }
     .biz h2 {
@@ -292,7 +299,7 @@ header.fixed .tnb button i {
     .biz .link {
         position: relative;
         overflow: auto;
-        width: calc(100% + 20px); /*% 단위와 px 단위를 동시에 계산해야 할 때 사용*/
+        width: calc(100% + 20px); /* % 단위와 px 단위를 동시에 계산해야 할 때 사용 */
         height: 38px;
     }
     .biz .link ul {
@@ -374,7 +381,7 @@ header.fixed .tnb button i {
     .purpose h2 strong::before {
         left: -50%;
         top: -45px;
-        background-size: 23px auto; /*넓이를 23px, 높이는 비율에 맞게 알아서*/
+        background-size: 23px auto; /* 넓이를 23px, 높이는 비율에 맞게 알아서 */
     }
     .purpose h2 strong::after {
         right: 50%;
@@ -382,6 +389,157 @@ header.fixed .tnb button i {
         background-size: 23px auto;
     }
     .purpose h2 span {
-        display: block; /*줄바꿈*/
+        display: block; /* 줄바꿈 */
+    }
+}
+
+.news {
+    margin: 98px 0 132px 0;
+}
+.news h2 {
+    display: none; /* 웹표준 상 section은 반드시 heading태그를 포함해야 하기 때문에 h2를 주고 숨김 처리함 */
+}
+.news ul li {
+    overflow: hidden;
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.news ul li:last-child {
+    margin-right: 0;
+}
+.news ul li a {
+    display: block;
+}
+.news ul li a img {
+    width: 100%;
+}
+.news ul li a .cate {
+    display: block;
+    margin: 23px 0 10px 20px;
+}
+.news ul li a .tit {
+    display: block;
+    margin: 0 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    /* 2줄 고정 */
+    height: 3em; /* 행간*줄수 - 단위: em */
+    overflow: hidden;
+}
+.news ul li a .date {
+    display: block;
+    margin: 30px 0 27px 20px;
+    color: #666;
+}
+
+@media screen and (max-width:640px){
+    .news {
+        margin: 39px 0 49px 0;
+    }
+    .news ul li {
+        display: none;
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    .news ul li:first-child {
+        display: block; /* 한 개의 li만 나오도록 하기 위해서 모든 li를 숨기고 첫번째 li만 남도록 */
+    }
+    .news ul li a .cate {
+        margin: 12px 0 5px 20px;
+    }
+    .news ul li a .tit {
+        margin: 0 0 24px 20px;
+        font-size: 15px;
+        /* 2줄 고정 */
+        height: auto; /* 행간*줄수 - 단위: em */
+        overflow: visible;
+    }
+    .news ul li a .date {
+        margin: 0 0 16px 20px;
+    }
+}
+
+footer {
+    padding: 24px 0 49px 0;
+    border-top: 1px solid #ededed;
+    color: #666;
+}
+footer .family {
+    float: right;
+}
+footer .family button {
+    width: 193px;
+    height: 41px;
+    padding: 0 10px;
+    border: 1px solid rgba(102, 102, 102, 0.6);
+    /* button 태그는 높이를 주면 글자가 위 아래 가운데 세로 정렬을 함
+    a였다면 padding이나 line-height로 세로 정렬값을 별도로 줘야 함 */
+}
+footer .family button span {
+    float: left;
+}
+footer .family button i {
+    float: right;
+}
+footer .inner {
+    float: left;
+}
+footer .fnav li {
+    float: left;
+    position: relative;
+}
+footer .fnav li::after {
+    position: absolute;
+    right: -1px;
+    top: 6px;
+    width: 1px;
+    height: 11px;
+    background-color: #ccc;
+    content: "";
+}
+footer .fnav li:last-child::after {
+    display: none; /*li중에 마지막 li의 after를 숨김 */
+}
+footer .fnav li.privacy {
+    font-weight: 700;
+}
+footer .fnav li a {
+    display: block;
+    padding: 0 12px 28px 12px;
+}
+footer .fnav li:first-child a {
+    padding-left: 0;
+}
+footer .finfo {
+    margin: 46px 0 3px 0;
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding: 12px 0 30px 0;
+    }
+    footer .family {
+        float: none;
+    }
+    footer .family button {
+        width: 136px;
+        height: 37px;
+        padding: 0 10px;
+    }
+    footer .inner {
+        float: none;
+    }
+    footer .fnav {
+        margin: 18px 0 0 0;
+    }
+    footer .fnav li::after {
+        top: 7px;
+        height: 6px;
+    }
+    footer .finfo {
+        margin: 0 0 3px 0;
     }
 }
