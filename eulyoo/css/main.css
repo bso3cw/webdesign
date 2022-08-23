@@ -1,0 +1,74 @@
+@import url('default.css');
+
+header {
+    position: absolute; /* body를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%; /* position: absolute를 주면 요소가 inline-block이 된 것처럼 내부에 콘텐츠가 존재하는 만큼의 넓이를 갖는다. */
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+header h1 {
+    float: left;
+    margin: 34px 284px 0 0;
+}
+header h1 a {
+    display: block;
+    width: 190px;
+    height: 31.5px;
+    background: url(../images/logo.svg) no-repeat center center / 100%; /* 로고를 영역에 꽉 차게 하기 위해서 size를 넓이 100% (높이는 비율에 맞게 알아서 - 높이를 안 써주면 알아서 들어감)
+    cover는 배경을 영역에 빈틈없이 매꾸는 것이기 때문에 로고가 잘림 */
+    font-size: 0;
+    line-height: 0;
+    /* 접근성 때문에 로고의 대체 텍스트로 쓸 글자 숨기기 */
+}
+header .gnb {
+    float: left;
+}
+header .tnb {
+    float: right
+}
+
+.visual {
+    height: 900px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    padding: 333px 0 13px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+.visual .txt_pc {
+    margin: 0 0 16px 0;
+    font-size: 25px;
+    line-height: 1.2;
+}
+.visual .txt_mobile {
+    display: none;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: auto;
+        padding-bottom: 84px;
+    }
+    .visual h2 {
+        padding: 96px 0 10px 0;
+        font-size: 20px;
+    }
+    .visual h2 span {
+        display: block;
+    }
+    .visual .txt_pc {
+        display: none;
+    }
+    .visual em {
+        display: none;
+    }
+    .visual .txt_mobile {
+        display: block;
+    }
+}
