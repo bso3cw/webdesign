@@ -43,7 +43,7 @@ html, body {
     word-break: keep-all;
 }
 #wrap { /* id="wrap" */
-    overflow-x: hidden;
+    overflow: hidden;
     min-width: 1280px;
 }
 .wrapper { /* 컨텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */

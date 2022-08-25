@@ -376,7 +376,7 @@ header .tnb ul li button i {
     }
     .interview .cnt .inner {
         padding: 0 20px;
-        height: 199px;
+        height: 230px;
     }
     .interview .cnt .inner .era {
         display: none;
@@ -397,10 +397,196 @@ header .tnb ul li button i {
     }
     .interview .cnt a span {
         float: left;
+        margin: 2px 0 0 0;
     }
     .interview .cnt a i {
         float: right;
-        margin: 2px 0 0 0;
+        margin: 3px 0 0 0;
         font-weight: 300;
+    }
+}
+
+.news {
+    margin: 223px 0 0 0;
+}
+.news .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.news .tit .btn button {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 6px 0 0 5px;
+    border: 1px solid #666;
+}
+.news .tit .btn button span {
+    display: none;
+}
+.news .tit .btn button i {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 4px 0 0 0;
+}
+.news .list {
+    padding: 45px 0 0 0;
+}
+.news .list ul { /* li 넓이 290 + 여백 40 = 330 * 8 */
+    width: 2640px;
+    margin: 0 0 0 -330px;
+}
+.news .list ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li a img {
+    width: 100%;
+}
+.news .list ul li a .subject {
+    display: block;
+    margin: 9px 0 15px 0;
+    font-weight: 700;
+}
+.news .list ul li a .cnt {
+    display: block;
+    line-height: 1.3;
+    height: 6em;
+    overflow: hidden;
+}
+
+@media screen and (max-width:640px){
+    .news {
+        margin: 44px 0 0 0;
+    }
+    .news .tit h2 {
+        font-size: 30px;
+    }
+    .news .tit .btn button {
+        width: 27px;
+        height: 27px;
+        margin: 9px 0 0 0;
+        margin-right: 2px;
+    }
+    .news .tit .btn button i {
+        margin: 4px 0 0 0;
+        font-size: 17px;
+    }
+    .news .list {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        width: calc(100% + 40px);
+        padding: 42px 0 15px 0;
+        margin: 0 0 0 -20px;
+    }
+    .news .list ul { /* li 넓이 208 + 여백 25 = 233 * 8 */
+        width: 1864px;
+        margin: 0 0 0 20px;
+    }
+    .news .list ul li {
+        width: 208px;
+        margin: 0 25px 0 0;
+    }
+    .news .list ul li a .subject {
+        margin: 9px 0 0 0;
+    }
+    .news .list ul li a .cnt {
+        display: none;
+    }
+}
+
+footer {
+    padding: 53px 0 72px 0;
+    margin: 154px 0 0 0;
+    background-color: #3D311C;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .flogo {
+    float: left;
+}
+footer .flogo img {
+    width: 170px;
+    opacity: 0.8;
+}
+footer .fnav {
+    float: left;
+    margin: 0 91px 0 69px;
+}
+footer .fnav ul li a {
+    display: block;
+    line-height: 25px;
+}
+footer .sns {
+    float: right;
+    font-size: 0;
+    line-height: 0;
+}
+footer .sns a {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    width: 42px;
+    height: 42px;
+}
+footer .sns a.insta {
+    background: url(../images/insta.svg) no-repeat center center;
+}
+footer .sns a.facebook {
+    background: url(../images/facebook.svg) no-repeat center center;
+}
+footer .sns a.naver {
+    background: url(../images/post.svg) no-repeat center center;
+}
+footer .copyright {
+    float: left;
+    line-height: 25px;
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding: 30px 0 34px 0;
+        margin: 15px 0 0 0;
+        text-align: center;
+    }
+    footer .flogo {
+        float: none;
+    }
+    footer .flogo img {
+        width: 129px;
+    }
+    footer .fnav {
+        float: none;
+        margin: 15px 0 22px 0;
+        text-align: center;
+    }
+    footer .fnav ul li a {
+        line-height: 22px;
+    }
+    footer .sns {
+        float: none;
+        margin: 0 0 34px 0;
+    }
+    footer .sns a {
+        margin: 0 0 0 5px;
+        width: 27px;
+        height: 27px;
+    }
+    footer .sns a.insta {
+        background-size: 22px auto;
+        /* background-size: %로 주면 background가 들어간 영역의 넓이의 %로 적용됨. 원래 배경 이미지의 비율로 계산 X */
+    }
+    footer .sns a.facebook {
+        background-size: 12px auto;
+    }
+    footer .sns a.naver {
+        background-size: 20px auto;
+    }
+    footer .copyright {
+        float: none;
+        line-height: 22px;
     }
 }
