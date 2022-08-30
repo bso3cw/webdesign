@@ -24,7 +24,7 @@ $(document).ready(function(){
     let scrolling
     headerFixed() // 함수의 실행
 
-    
+
     /* 스크롤 할 때마다 실행 */
     $(window).scroll(function(){
         headerFixed() // 함수의 실행
@@ -38,5 +38,17 @@ $(document).ready(function(){
             $('header').removeClass('fixed')
         }
     }
+
+    /* header nav에 마우스를 올리면
+       header에 open 클래스를 추가함 */
+       $('header nav > ul').on('mouseenter focusin',function(){
+        $('header').addClass('open')
+       })
+       $('header').on('mouseleave',function(){
+        $('header').removeClass('open')
+       })
+       $('header nav > ul > li:last-child > ul > li:last-child').on('focusout',function(){
+        $('header').removeClass('open')
+       })
 })
 
