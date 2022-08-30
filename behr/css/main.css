@@ -376,6 +376,9 @@ header nav > ul > li > ul { /* 2차메뉴 */
 .service ul li a i {
     font-size: 35px;
 }
+.service h2 {
+    display: none;
+}
 @media screen and (max-width:640px){
     .service ul li {
         float: none;
@@ -424,7 +427,7 @@ aside button span {
     }
 }
 footer {
-    padding: 330px 0 100px 0;
+    padding: 0 0 100px 0;
     background-color: #2d2d2d;
     color: rgba(255,255,255,0.8);
 }
