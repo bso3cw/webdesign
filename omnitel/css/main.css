@@ -1,0 +1,168 @@
+@import url(default.css);
+
+h1 {
+    display: none;
+}
+.visual {
+    height: 850px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+}
+.visual h2 {
+    padding: 298px 0 0 0;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+}
+.visual h2 strong {
+    font-weight: 700;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: 350px;
+    }
+    .visual h2 {
+        padding: 107px 0 0 0;
+        font-size: 35px;
+    }
+}
+
+.works {
+    background-color: #F39800;
+    color: #fff;
+    text-align: center;
+}
+.works .inner h2 {
+    padding: 52px 0 10px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.works .inner p {
+    margin: 0 0 67px 0;
+}
+.works .inner p span {
+    display: block;
+}
+.works .inner ul {
+    display: block;
+}
+.works ul li {
+    float: left;
+    width: 640px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.works ul li a {
+    display: block;
+    padding: 82px 0 0 0;
+    height: 300px;
+}
+.works ul li.works01 {
+    background: url(../images/works01.png) no-repeat center center / cover;
+}
+.works ul li.works02 {
+    background: url(../images/works02.png) no-repeat center center / cover;
+}
+.works ul li.works03 {
+    background: url(../images/works03.png) no-repeat center center / cover;
+}
+.works ul li i {
+    display: block;
+    margin: 0 0 14px 0;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width:640px){
+    .works .inner h2 {
+        padding: 36px 0 13px 0;
+        font-size: 25px;
+    }
+    .works .inner p {
+        margin: 0 0 25px 0;
+    }
+    .works .inner p span {
+        display: inline;
+    }
+    .works ul li {
+        float: none;
+        width: auto;
+        margin: 0 20px;
+        font-size: 20px;
+    }
+    .works ul li:last-child {
+        margin-bottom: 20px;
+    }
+    .works ul li a {
+        padding: 29px 0 37px 0;
+        height: auto;
+    }
+    .works ul li i {
+        margin: 0 0 6px 0;
+        font-size: 30px;
+    }
+}
+
+.news {
+    padding: 52px 0 0 0;
+}
+.news h2 {
+    margin: 0 0 36px 0;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.news ul li {
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0;
+}
+.news ul li:last-child {
+    margin-right: 0;
+}
+.news ul li strong {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+}
+.news ul li p {
+    margin: 10px 0;
+    color: #666;
+}
+.news ul li span {
+    display: block;
+    margin: 0 0 97px 0;
+    line-height: 1.5;
+    height: 10.5em;
+    overflow: hidden;
+}
+
+@media screen and (max-width:640px){
+    .news {
+        padding: 39px 0 0 0;
+    }
+    .news h2 {
+        margin: 0 0 29px 0;
+        font-size: 36px;
+    }
+    .news ul li {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+    .news ul li strong {
+        font-size: 17px;
+        overflow: nowrap;
+    }
+    .news ul li span {
+        margin: 0 0 43px 0;
+        line-height: 1.5;
+        height: 6em;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+}
