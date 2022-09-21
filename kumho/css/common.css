@@ -61,7 +61,7 @@ html, body {
     position: absolute;
     left: 20px;
     top: 28px;
-    z-index: 102;
+    z-index: 103;
 }
 .header .logo a {
     display: block;
