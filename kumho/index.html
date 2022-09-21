@@ -237,7 +237,9 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="wrapper">
+            <!-- wrapper와 동일한 넓이를 가진 position: relative가 있는 요소는 cnt_wrap이라고 class를 줌 -->
+            <div class="wrapper cnt_wrap">
+                <!-- family가 열리면 open class 추가 (jquery) -->
                 <div class="family">
                     <div class="inner">
                            <!-- family site는 모두 다른 사이트이기 때문에 target="_blank" -->
@@ -262,6 +264,14 @@
                         </button>
                     </div>
                 </div>
+                <ul class="fnav">
+                    <li><a href="#n">제보실</a></li>
+                    <li><a href="#n">고객센터</a></li>
+                    <li><a href="#n">OB사랑방</a></li>
+                    <li><a href="#n">Contact us</a></li>
+                    <li><a href="#n">개인정보처리방침</a></li>
+                </ul>
+                <div class="copyright">copyright(c) KUMHO E&C ALL RIGHTS RESERVED </div>
             </div>
         </footer>
     </div>

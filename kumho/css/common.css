@@ -42,6 +42,11 @@ html, body {
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
 
+/* wrapper와 동일한 사이즈를 가진 position: relative가 있는 요소는 cnt_wrap이라고 class를 줌 */
+.cnt_wrap {
+    position: relative;
+}
+
 .header {
     position: absolute;
     left: 0;
@@ -461,5 +466,121 @@ html, body {
     }
     .header.menu_mobile .lang {
         display: block;
+    }
+}
+
+.footer {
+    background-color: #1D1D1D;
+    color: #FFF;
+}
+.footer .family {
+    position: absolute;
+    right: 0;
+    top: 63px;
+}
+.footer .family .inner {
+    position: relative; /* ul의 정렬의 기준 */
+    width: 179px;
+}
+.footer .family button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* button 안에 있는 span i를 좌우 끝으로 배치, 위아래 가운데 배치 */
+    width: 100%;
+    height: 38px;
+    padding: 0 7px 0 12px;
+    /* button 안에서 좌우 끝으로 배치된 span과 i의 여백 */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+}
+.footer .family button i {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    font-weight: 300;
+}
+.footer .family ul {
+    /* 넓이를 가지고 있는 inner를 기준으로 정렬 */
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    width: 100%;
+    padding: 13px 0 14px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom-width: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #1D1D1D;
+}
+.footer .family ul li a {
+    line-height: 2;
+}
+.footer .family ul li a:hover {
+    font-weight: 700;
+}
+.footer .family .btn_close {
+    display: none;
+}
+/* family가 열렸을 때의 스타일
+   1. btn_open 사라짐
+   2. ul이 나타남
+   3.btn_close가 나타남 */
+.footer .family.open .btn_open {
+    display: none;
+}
+.footer .family.open ul {
+    display: block;
+}
+.footer .family.open .btn_close {
+    display: flex;
+    border-radius: 0 0 5px 5px;
+}
+.footer .fnav {
+    display: flex;
+    padding: 39px 0 0 0;
+}
+.footer .copyright {
+    padding: 18px 0 58px 0;
+    color: #666;
+}
+.footer .fnav li {
+    margin: 0 23px 0 0;
+}
+.footer .fnav li:last-child {
+    font-weight: 700;
+}
+
+@media screen and (max-width:640px){
+    .footer .family {
+        position: relative;
+        right: auto;
+        top: auto;
+        padding: 29px 0 0 0;
+        display: flex;
+    }
+    .footer .family .inner {
+        width: 161px;
+    }
+    .footer .family button {
+        height: 33px;
+        padding: 0 4px 0 11px;
+    }
+    .footer .family button i {
+        font-size: 18px;
+    }
+    .footer .family ul {
+        bottom: 33px;
+        padding: 4px 0 8px 11px;
+    }
+    .footer .fnav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 18px 0 0 0;
+    }
+    .footer .copyright {
+        padding: 6px 0 47px 0;
+    }
+    .footer .fnav li {
+        margin: 0 20px 0 0;
     }
 }

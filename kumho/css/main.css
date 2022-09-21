@@ -267,6 +267,7 @@
     margin: 0 8px 0 0;
 }
 .news .more a i {
+    margin-top: 1px;
     font-size: 22px;
 }
 @media screen and (max-width:640px){
