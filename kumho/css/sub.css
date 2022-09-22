@@ -51,6 +51,10 @@
     }
 }
 .lnb {
+    position: relative;
+    z-index: 90;
+    /* lnb가 콘텐츠에 깔리지 않도록 하기 위해서 z-index를 줌
+       콘텐츠에 z-index를 주면 절대 90 이상을 주면 안 됨 */
     height: 50px;
     line-height: 50px;
     /* 높이가 제한되고 요소들이 좌우로 배치되어 있는 디자인은 높이만큼 행간을 줌 */
@@ -75,6 +79,7 @@
 .lnb .menu .home i {
     display: block;
     margin: 13px 0 0 0;
+    font-size: 25px;
 }
 .lnb .menu .depth {
     position: relative;
@@ -102,6 +107,7 @@
     position: absolute;
     left: 0;
     top: 50px;
+    padding: 1px 0 6px 0;
     width: 100%;
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -151,13 +157,106 @@
     display: block;
     font-size: 25px;
 }
+@media screen and (max-width:640px){
+    .lnb {
+        height: 40px;
+        line-height: 40px;
+    }
+    .lnb .wrapper {
+        margin: 0; /* wrapper의 기본 여백을 lnb에서는 삭제 */
+    }
+    .lnb .lnb_wrap {
+        height: 40px;
+    }
+    .lnb .menu {
+        width: calc(100% - 40px);
+    }
+    .lnb .menu .home {
+        width: 40px;
+        border-left: 0;
+    }
+    .lnb .menu .home i {
+        margin: 10px 0 0 0;
+        font-size: 20px;
+    }
+    /* home - 40px
+       1차 메뉴 depth
+       2차 메뉴 depth
+       lnb_btn - 40px
+
+       lnb_wrap - 100%
+           - menu    100% - 40px
+               - 자식에게는 menu의 넓이가 100%
+               - home 40px 고정
+               - depth 1차 메뉴: (100% - 40px)의 절반
+               - depth 2차 메뉴
+           - lnb_btn 40px 고정
+       
+       home, lnb_btn의 넓이는 고정
+       depth의 넓이는 가변 - 전체 넓이(100%)에서 home, lnb_btn의 넓이를 뺀 나머지의 절반씩 */
+    .lnb .menu .depth {
+        width: calc((100% - 40px) / 2);
+    }
+    .lnb .menu .depth button {
+        padding: 0 8px 0 15px;
+    }
+    .lnb .menu .depth button span {
+        font-size: inherit;
+    }
+    .lnb .menu .depth button i {
+        font-size: 15px;
+    }
+    .lnb .menu .depth ul {
+        padding: 6px 0 9px 0;
+        top: 40px;
+    }
+    .lnb .menu .depth ul li a {
+        padding: 0 0 0 13px;
+        line-height: 30px;
+    }
+    .lnb .lnb_btn ul li {
+        width: 40px;
+        border-left: 0;
+    }
+    .lnb .lnb_btn ul li:last-child {
+        border-right: 0;
+    }
+    .lnb .lnb_btn ul li.print {
+        display: none;
+    }
+    .lnb .lnb_btn ul li button {
+        height: 40px;
+    }
+    .lnb .lnb_btn ul li button i {
+        display: block;
+        font-size: 20px;
+    }
+}
 .container {
     min-height: 300px;
     /* 초기에 코딩할 때 메뉴 별 빈 페이지를 만들고 코딩, 나중에 콘텐츠가 들어가겠지만
        초기에 콘텐츠가 없으면 header/footer에 열리는 콘텐츠가 잘리는 현상이 발생한다.
        그래서 최소 높이를 주고 코딩함. */
 }
+.container .sub_tit {
+    margin: 64px 0 77px 0;
+}
 .container .sub_tit h2 {
     font-size: 40px;
     font-weight: 700;
+}
+.container .contents {
+    margin: 0 0 128px 0;
+}
+@media screen and (max-width:640px){
+    .container .sub_tit {
+        margin: 27px 0 32px 0;
+    }
+    .container .sub_tit h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .container .contents {
+        margin: 0 0 69px 0;
+    }  
 }
