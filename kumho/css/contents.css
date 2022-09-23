@@ -62,18 +62,21 @@
 .cnt_historyN .history_wrap::before {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 20px;
     width: 1px;
-    height: 100%;
+    height: calc(100% - 25px);
     background-color: #ED1C24;
     content: "";
 }
 .cnt_historyN .inner {
     position: relative; /* year_tit 정렬의 기준 */
 }
+.cnt_historyN .inner + .inner {
+    margin: 96px 0 0 0;
+}
 .cnt_historyN .year_tit {
     position: absolute;
-    top: 0;
+    top: 25px;
 }
 .cnt_historyN .year_tit.left {
     left: 0;
@@ -93,4 +96,175 @@
 }
 .cnt_historyN .year_tit .bg.year2000 {
     background-image: url(../images/contents/historyN02.png);
+}
+.cnt_historyN .year_tit h3 {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+}
+.cnt_historyN .year_list.left {
+    margin: 0 0 0 50%;
+}
+.cnt_historyN .year_list.right {
+    margin: 0 50% 0 0;
+}
+.cnt_historyN .year_list h4 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+}
+.cnt_historyN .year_list.left h4 {
+    margin-left: 27px;
+    float: left;
+}
+.cnt_historyN .year_list.right h4 {
+    margin-right: 27px;
+    float: right;
+}
+.cnt_historyN .year_list h4::before {
+    position: absolute;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ED1C24;
+    border-radius: 8px;
+    background-color: #fff;
+    content: "";
+}
+.cnt_historyN .year_list.left h4::before {
+    left: -32px;
+}
+.cnt_historyN .year_list.right h4::before {
+    right: -34px;
+}
+.cnt_historyN .year_list dl {
+    padding-top: 14px;
+}
+.cnt_historyN .year_list.left dl {
+    margin: 0 0 68px 128px;
+}
+.cnt_historyN .year_list.right dl {
+    margin: 0 128px 63px 0;
+}
+.cnt_historyN .year_list.left dl dt {
+    float: left;
+}
+.cnt_historyN .year_list.right dl dt {
+    float: right;
+}
+.cnt_historyN .year_list.left dl dd {
+    margin-left: 30px;
+}
+.cnt_historyN .year_list.right dl dd {
+    margin-right: 30px;
+    text-align: right;
+}
+.cnt_historyN .year_list dl dt {
+    line-height: 1.3;
+    font-weight: 700;
+}
+.cnt_historyN .year_list dl dd {
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+.cnt_historyN .year_list dl dd ~ dt {
+    padding-top: 20px;
+}
+.cnt_historyN .year_list dl dt + dd ~ dt + dd {
+    padding-top: 20px;
+}
+@media screen and (max-width:640px){
+    .cnt_historyN .tit {
+        font-size: 17px;
+    }
+    .cnt_historyN .tit span {
+        display: inline; /* pc에서만 줄 바꿈 */
+    }
+    .cnt_historyN .history_wrap {
+        margin: 15px 0 0 0;
+    }
+    .cnt_historyN .history_wrap::before {
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    .cnt_historyN .inner + .inner {
+        margin: 20px 0 0 0;
+    }
+    .cnt_historyN .year_tit {
+        position: relative;
+        top: 0;
+        width: calc(100% + 40px);
+    }
+    .cnt_historyN .year_tit.left {
+        left: -20px;
+    }
+    .cnt_historyN .year_tit.right {
+        right: 20px;
+    }
+    .cnt_historyN .year_tit .bg {
+        width: 100%;
+        height: 132px;
+    }
+    .cnt_historyN .year_tit h3 {
+        left: 20px;
+        font-size: 30px;
+    }
+    .cnt_historyN .year_list.left {
+        margin: 17px 0 0 28px;
+    }
+    .cnt_historyN .year_list.right {
+        margin: 17px 0 0 28px;
+    }
+    .cnt_historyN .year_list h4 {
+        font-size: 18px;
+    }
+    .cnt_historyN .year_list.left h4 {
+        margin-left: 0;
+        float: none;
+    }
+    .cnt_historyN .year_list.right h4 {
+        margin-right: 0;
+        float: none;
+    }
+    .cnt_historyN .year_list h4::before {
+        top: 10px;
+        width: 4px;
+        height: 4px;
+    }
+    .cnt_historyN .year_list.left h4::before {
+        left: -31px;
+    }
+    .cnt_historyN .year_list.right h4::before {
+        left: -31px;
+    }
+    .cnt_historyN .year_list.left dl {
+        margin: 7px 0 30px 0;
+    }
+    .cnt_historyN .year_list.right dl {
+        margin: 7px 0 30px 0;
+    }
+    .cnt_historyN .year_list.right dl dt {
+        float: left;
+    }
+    .cnt_historyN .year_list.left dl dd {
+        margin-left: 30px;
+    }
+    .cnt_historyN .year_list.right dl dd {
+        margin-right: 0;
+        margin-left: 30px;
+        text-align: left;
+    }
+    .cnt_historyN .year_list dl {
+        padding-top: 0;
+    }
+    .cnt_historyN .year_list dl dd ~ dt {
+        padding-top: 15px;
+    }
+    .cnt_historyN .year_list dl dt + dd ~ dt + dd {
+        padding-top: 15px;
+    }
 }
