@@ -79,10 +79,10 @@
     top: 25px;
 }
 .cnt_historyN .year_tit.left {
-    left: 0;
+    left: 120px;
 }
 .cnt_historyN .year_tit.right {
-    right: 0;
+    right: 120px;
 }
 .cnt_historyN .year_tit .bg {
     width: 480px;
