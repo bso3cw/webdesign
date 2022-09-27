@@ -1,0 +1,296 @@
+@import url('default.css');
+@import url('common.css');
+
+.visual {
+    color: #FFFFFF;
+}
+.vis1 {
+    position: relative;
+    float: right;
+    background: url(../images/visual_bg1.png) no-repeat center center / cover;
+    width: 50%;
+    height: 800px;
+}
+.vis1 h1 {
+    padding: 61px 0 15px 60px;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.vis1 h1 strong {
+    font-weight: 700;
+}
+.vis1 p {
+    display: block;
+    padding: 0 0 52px 0;
+    margin: 0 0 0 60px;
+    width: 369px;
+    border-bottom: 3px solid #FFFFFF;
+}
+.vis1 .rd {
+    display: block;
+    background-color: rgba(183, 0, 2, 0.9);
+    margin: 170px 0 0 0;
+    width: 500px;
+    height: 300px;
+}
+.vis2 {
+    float: left;
+    background: url(../images/visual_bg2.png) no-repeat center center / cover;
+    width: 50%;
+    height: 800px;
+    text-align: right;
+}
+.vis2 h1 {
+    padding: 61px 60px 15px 0;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.vis2 h1 strong {
+    font-weight: 700;
+}
+.vis2 p {
+    display: inline;
+    padding: 0 0 52px 0;
+    margin: 0 60px 0 0;
+    width: 369px;
+    border-bottom: 3px solid #B70002;
+}
+.vis2 .bl {
+    display: block;
+    background-color: rgba(2, 54, 101, 0.9);
+    position: absolute;
+    right: 50%;
+    top: 0;
+    display: block;
+    margin: 332px 0 0 0;
+    width: 500px;
+    height: 300px;
+}
+@media screen and (max-width:640px){
+    .vis1 {
+        width: auto;
+        height: auto;
+    }
+    .vis1 h1 {
+        padding: 21px 0 11px 20px;
+        margin: 0 0 21px 0;
+        font-size: 18px;
+    }
+    .vis1 p {
+        display: none;
+    }
+    .vis1 .rd {
+        margin: 95px 0 0 76px;
+        width: 284px;
+        height: auto;
+    }
+    .vis2 {
+        width: 80%;
+        height: 800px;
+    }
+    .vis2 h1 {
+        padding: 21px 20px 11px 0;
+        font-size: 18px;
+    }
+    .vis2 p {
+        display: none;
+    }
+    .vis2 .bl {
+        position: relative;
+        display: block;
+        margin: 0 0 0 0;
+        width: auto;
+        height: auto;
+    }
+}
+
+.commit {
+    background: url(../images/comm_bg.png) no-repeat center center / cover;
+    color: #FFFFFF;
+    padding: 207px 0 283px 0;
+    text-align: center;
+}
+.commit em {
+    padding: 3px 0 0 0;
+    width: 56px;
+    border-top: 1px solid #FFFFFF;
+}
+.commit h2 {
+    margin: 11px 0 6px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.commit p {
+    margin: 0 0 70px 0;
+}
+.commit p span {
+    display: block;
+}
+.commit ul li {
+    display: inline-block;
+    margin: 0 91px 0 0;
+}
+.commit ul a {
+    display: flex;
+    flex-direction: column;
+}
+.commit ul li i {
+    margin: 0 0 8px 0;
+    font-size: 50px;
+}
+@media screen and (max-width:640px){
+    .commit {
+        padding: 70px 0 89px 0;
+    }
+    .commit em {
+        width: auto;
+    }
+    .commit h2 {
+        margin: 9px 0 6px 0;
+        font-size: 25px;
+    }
+    .commit p {
+        margin: 0 0 42px 0;
+    }
+    .commit p span {
+        display: none;
+    }
+    .commit ul li {
+        display: inline-block;
+        margin: 0 28px 0 0;
+    }
+    .commit ul a {
+        display: flex;
+        flex-direction: column;
+    }
+    .commit ul li i {
+        margin: 0 0 5px 0;
+        font-size: 30px;
+    }
+}
+
+.recruit {
+    color: #FFFFFF;
+    padding: 135px 0 130px 0;
+    background: url(../images/recruit_bg.png) no-repeat center center / cover;
+    text-align: center;
+}
+.recruit em {
+    border-top: 1px solid #FFFFFF;
+    padding: 3px 0 0 0;
+}
+.recruit h2 {
+    margin: 11px 0 6px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.recruit p {
+    margin: 0 0 83px 0;
+}
+.recruit ul {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.recruit ul li {
+    display: inline;
+    float: left;
+    margin: 0 40px 0 0;
+    color: #3d3d3d;
+    background-color: #FFFFFF;
+    width: 230px;
+    height: 316px;
+}
+.recruit ul li:first-child {
+    color: #FFFFFF;
+    background: url(../images/recruit_cnt.png) no-repeat center center / cover;
+    width: 510px;
+}
+.recruit ul li:first-child h3 {
+    margin: 0 0 0 20px;
+    font-size: 30px;
+}
+.recruit ul li:first-child span {
+    padding-bottom: 0;
+    margin: 0 0 51px 20px;
+}
+.recruit ul li a {
+    display: block;
+    height: 316px;
+}
+.recruit ul li h3 {
+    padding: 51px 0 18px 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.recruit ul li span {
+    position: relative;
+    display: block;
+    padding: 0 0 56px 30px;
+}
+.recruit ul li i {
+    position: absolute;
+    top: 3px;
+    left: 105px;
+    font-size: 16px;
+}
+@media screen and (max-width:640px){
+    .recruit {
+        padding: 70px 0 90px 0;
+    }
+    .recruit h2 {
+        margin: 9px 0 6px 0;
+        font-size: 25px;
+    }
+    .recruit p {
+        display: block;
+        margin: 0 0 23px 0;
+    }
+    .recruit ul {
+        display: block;
+        justify-content: center;
+        text-align: left;
+    }
+    .recruit ul li {
+        display: flex;
+        float: none;
+        margin: 0 16px 0 0;
+        width: 96px;
+        height: 60px;
+    }
+    .recruit ul li.cnt2, .recruit ul li.cnt3, .recruit ul li.cnt4, {
+        display: flex;
+        justify-content: center;
+    }
+    .recruit ul li.cnt1 {
+        margin: 0 0 16px 0;
+        display: flex;
+        float: none;
+        width: auto;
+        height: 146px;
+    }
+    .recruit ul li.cnt1 h3 {
+        padding: 22px 0 9px 0;
+        font-size: 20px;
+    }
+    .recruit ul li.cnt1 span {
+        padding: 0;
+        margin: 0 0 51px 20px;
+    }
+    .recruit ul li.cnt2 span, .recruit ul li.cnt3 span, .recruit ul li.cnt4 span {
+        display: none;
+    }
+    .recruit ul li a {
+        display: block;
+        height: auto;
+    }
+    .recruit ul li h3 {
+        padding: 19px 27px;
+        font-size: 15px;
+    }
+    .recruit ul li span.more {
+        display: none;
+    }
+}
