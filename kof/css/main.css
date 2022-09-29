@@ -115,3 +115,124 @@
         font-size: 11px;
     }
 }
+
+.part {
+    margin: 66px 0 0 0;
+}
+.part h2 {
+    margin: 0 0 25px 0;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.part .list ul {
+    width: 2400px;
+    /* 모든 li의 넓이와 여백을 합한 넓이
+       li의 넓이 440px + 오른쪽 여백 40px = 480px
+       480 * li의 개수 5 = 2400 */
+    margin-left: -480px;
+    /* 하나의 li의 넓이 + 여백 */
+}
+.part .list ul li {
+    float: left;
+    width: 440px;
+    margin: 0 40px 0 0;
+}
+.part .list ul li a {
+    display: block;
+}
+.part .list ul li a .pic {
+    overflow: hidden;
+    /* 마우스 오버시 이미지가 확대되는데 영역 밖으로 이미지가 나가지 않도록 */
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 하단에 발생하는 여백 삭제 */
+}
+.part .list ul li a h3 {
+    margin: 18px 0 10px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+.part .list ul li a p {
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+}
+.part .list ul li a .pic img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* 마우스 오버했을 때 */
+.part .list ul li a:hover .pic img {
+    transform: scale3d(1.2,1.2,1);
+}
+.part .more {
+    position: absolute;
+    right: 0;
+    top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    width: 128px;
+    height: 38px;
+    border: 1px solid #666;
+    border-radius: 19px;
+}
+.part .more i {
+    color: #666;
+    font-size: 13px;
+}
+@media screen and (max-width:640px){
+    .part {
+        margin: 38px 0 0 0;
+    }
+    .part h2 {
+        margin: 0 0 13px 0;
+        font-size: 20px;
+    }
+    .part .list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px; /* 가로 스크롤 바가 글자에 겹쳐서 */
+    }
+    .part .list ul {
+        width: 1104px;
+        /* 모든 li의 넓이와 여백을 합한 넓이
+           li의 넓이 440px + 오른쪽 여백 40px = 480px
+           480 * li의 개수 5 = 2400 */
+        margin-left: 0; /* 모바일은 첫 번째 li부터 나타남 */
+        /* 하나의 li의 넓이 + 여백 */
+    }
+    .part .list ul li {
+        width: 208px;
+        margin: 0 16px 0 0;
+    }
+    .part .list ul li:last-child {
+        margin-right: 0;
+    }
+    .part .list ul li a h3 {
+        margin: 15px 0 9px 0;
+        font-size: 18px;
+    }
+    .part .list ul li a p {
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+    }
+    /* 마우스 오버했을 때 */
+    .part .more {
+        top: 3px;
+        right: 14px;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+    }
+    .part .more span {
+        display: none;
+    }
+    .part .more i {
+        font-size: 9px;
+    }
+}
