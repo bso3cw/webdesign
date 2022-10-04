@@ -660,9 +660,17 @@
     font-size: 60px;
 }
 .banner ul li a h3 {
+    margin: 0 0 8px 0;
     font-size: 30px;
     font-weight: 700;
-    margin: 0 0 8px 0;
+}
+@media screen and (min-width:641px){
+    .banner ul li {
+        transition: 0.5s;
+    }
+    .banner ul li:hover {
+        transform: translate(-10px, -10px);
+    }
 }
 @media screen and (max-width:640px){
     .banner {

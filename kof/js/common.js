@@ -80,7 +80,7 @@ $(document).ready(function(){
         if(scrolling>500){
             $('aside.top').fadeIn()
         }else{
-            $('aside.top').FadeOut()
+            $('aside.top').fadeOut()
         }
     }
 
