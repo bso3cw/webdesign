@@ -1,0 +1,79 @@
+/* 콘텐츠 페이지 스타일 */
+
+/* 소개의장 > 인사말 */
+.cnt_greeting {
+    margin: 0 0 127px 0;
+}
+.cnt_greeting .tit {
+    margin: 0 0 19px 0;
+    font-size: 25px;
+    line-height: 1.4;
+}
+.cnt_greeting .tit strong {
+    color: #163787;
+    font-weight: 700;
+}
+.cnt_greeting .bg {
+    position: relative;
+    width: calc(50% + 700px); /* 컨텐츠 영역의 넓이 1400px의 절반 700px */
+    left: calc(50% - 700px);
+    height: 375px;
+    background: url(../images/contents/greeting_img01.png) no-repeat center center / cover;
+}
+.cnt_greeting .txt_wrap {
+    margin: 21px 0 0 0;
+}
+.cnt_greeting .txt_wrap .colgroup1 {
+    float: left;
+    width: 680px;
+    margin: 0 40px 0 0;
+}
+.cnt_greeting .txt_wrap .colgroup2 {
+    float: left;
+    width: 680px;
+}
+.cnt_greeting .txt_wrap p {
+    text-align: justify; /* 양쪽 정렬 */
+    word-break: normal; /* 단어 별로 줄 바꿈 해제 - word-break: keep-all 유지하면 자간이 늘어남 */
+}
+.cnt_greeting .txt_wrap .sign {
+    margin: 21px 0 0 0;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: right;
+}
+@media screen and (max-width:640px){
+    .cnt_greeting {
+        margin: 0 0 70px 0;
+    }
+    .cnt_greeting .tit {
+        margin: 0 0 30px 0;
+        font-size: 17px;
+        line-height: 1.2;
+    }
+    .cnt_greeting .bg {
+        width: 100%; /* 컨텐츠 영역의 넓이 1400px의 절반 700px */
+        left: auto;
+        height: 272px;
+    }
+    .cnt_greeting .txt_wrap {
+        margin: 15px 0 0 0;
+    }
+    .cnt_greeting .txt_wrap .colgroup1 {
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+    .cnt_greeting .txt_wrap .colgroup2 {
+        float: none;
+        width: auto;
+    }
+    .cnt_greeting .txt_wrap p {
+        text-align: left;
+        word-break: keep-all;
+    }
+    .cnt_greeting .txt_wrap .sign {
+        margin: 32px 0 0 0;
+        font-size: 18px;
+    }
+}

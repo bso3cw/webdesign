@@ -33,3 +33,204 @@
     font-weight: 400;
     text-align: center;
 }
+@media screen and (max-width:640px){
+    .sub_visual {
+        height: 200px;
+    }
+    .sub_visual strong {
+        padding: 130px 0 0 0;
+        font-size: 20px;
+        text-align: left;
+    }  
+}
+
+.lnb {
+    position: relative;
+    z-index: 200;
+    height: 60px;
+    background-color: #004B9E;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.lnb .menu {
+    float: left;
+}
+.lnb .menu .home {
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    text-align: center;
+}
+.lnb .menu .home i {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+.lnb .menu .depth {
+    position: relative;
+    float: left;
+    width: 251px;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+}
+.lnb .menu .depth .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* flex는 inline 요소일 때 하위 콘텐츠가 존재하는 만큼만 넓이를 가짐 */
+    height: 60px;
+    padding: 0 22px 0 22px;
+}
+.lnb .menu .depth .btn span {
+    font-size: 18px;
+}
+.lnb .menu .depth .btn i {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    transition: 0.3s;
+}
+.lnb .menu .depth ul {
+    display: none;
+    position: absolute; /* 마우스 오버나 클릭으로 나타나는 콘텐츠는 반드시 absolute */
+    left: 0;
+    top: 60px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.1);
+    color: #3d3d3d;
+}
+.lnb .menu .depth.open .btn i {
+    transform: rotate(-180deg);
+}
+.lnb .menu .depth ul li:first-child {
+    padding-top: 22px;
+}
+.lnb .menu .depth ul li:last-child {
+    padding-bottom: 28px;
+}
+.lnb .menu .depth ul li a {
+    display: block;
+    padding: 0 0 0 22px;
+    font-size: 18px;
+    line-height: 40px;
+}
+.lnb .menu .depth ul li.now a, .lnb .menu .depth ul li a:hover {
+    font-weight: 700;
+    color: #163787;
+}
+.lnb .print {
+    float: right;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; /* i 태그가 위아래 가운데 */
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    text-align: center;
+}
+.lnb .print i {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+@media screen and (max-width:640px){
+    .lnb {
+        height: 50px;
+    }
+    .lnb .wrapper {
+        margin: 0;
+        /* lnb는 모바일에서 컨텐츠 영역의 여백이 필요 없음 */
+    }
+    .lnb .menu {
+        float: none;
+    }
+    .lnb .menu .home {
+        display: none;
+    }
+    .lnb .menu .depth {
+        width: 50%;
+    }
+    .lnb .menu .depth:last-child {
+        border-width: 0;
+    }
+    .lnb .menu .depth .btn {
+        padding: 0 17px 0 15px;
+        height: 50px;
+    }
+    .lnb .menu .depth .btn span {
+        font-size: 15px;
+    }
+    .lnb .menu .depth .btn i {
+        font-size: 11px;
+    }
+    .lnb .menu .depth ul {
+        top: 50px;
+    }
+    .lnb .menu .depth ul li:first-child {
+        padding-top: 17px;
+    }
+    .lnb .menu .depth ul li:last-child {
+        padding-bottom: 24px;
+    }
+    .lnb .menu .depth ul li a {
+        padding: 0 0 0 15px;
+        font-size: 15px;
+    }
+    .lnb .print {
+        display: none;
+    }
+}
+
+.container {
+    min-height: 300px;
+}
+.container .sub_tit {
+    margin: 65px 0 83px 0;
+}
+.container .sub_tit h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .container .sub_tit {
+        margin: 28px 0 20px 0;
+    }
+    .container .sub_tit h2 {
+        font-size: 20px;
+    }
+}
+
+.contents .table_wrap table {
+    width: 100%;
+    border-collapse: collapse; /* th/td에 준 선을 겹쳐서 표현하는 방법 */
+}
+.contents .table_wrap table th, .contents .table_wrap table td {
+    border: 1px solid #ccc;
+}
+.contents .table_wrap table th:first-child, .contents .table_wrap table td:first-child {
+    border-left: 0;
+}
+.contents .table_wrap table th:last-child, .contents .table_wrap table td:last-child {
+    border-right: 0;
+}
+.contents .table_wrap table thead th, .contents .table_wrap table thead td {
+    padding: 14px 0;
+    background-color: #f4f4f4;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+.contents .table_wrap table tbody th {
+    font-weight: 400;
+}
+.contents .table_wrap table tbody th, .contents .table_wrap table tbody td {
+    padding: 7px 5px;
+    text-align: center;
+}
+.contents .table_wrap table tbody td ul {
+    padding: 25px 10px 25px 27px;
+    text-align: left;
+}
