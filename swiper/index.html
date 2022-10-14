@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popup.js"></script>
+    <title>swiper 팝업 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <section class="visual1 popup swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <span>초록빛 미래가 더 나은 미래</span>
+                        <strong>변화를 향해 과감하게 도전하고 성취해 나가세요.</strong>
+                    </div>
+                    <img src="images/popup1.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <span>COLD WEATHER STYLE</span>
+                        <strong>추운 날씨에 어울리는 다양한 스타일의 컨버스를 만나보세요.</strong>
+                    </div>
+                    <img src="images/popup2.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                    <div class="txt">
+                        <span>입기 쉽고 편안한, 그리고 멋스러움까지</span>
+                        <strong>미주와 함께 새로운 계절을 위한<br>배럴핏 2022 FW 컬렉션을 지금 만나보세요.</strong>
+                    </div>
+                    <img src="images/popup3.png" alt="">
+                </li>
+            </ul>
+            <button class="ctrl_prev">이전 팝업 보기</button>
+            <button class="ctrl_next">다음 팝업 보기</button>
+            <div class="ctrl_group">
+                <div class="ctrl_paging"></div>
+                <button class="ctrl_stop">정지</button>
+                <button class="ctrl_play">재생</button>
+            </div>
+            <!-- swiper-pagination swiper에서 기본 제공하는 각 요소별 class명을 그대로 사용하면
+                 기본 스타일이 적용됨. (스타일을 변경해서 써도 됨)
+                 스타일을 내가 전부 제어하려면 class명을 변경하면 됨.
+                 (swiper init에서 요소의 class명 변경) -->
+        </section>
+    </div>
+</body>
+</html>

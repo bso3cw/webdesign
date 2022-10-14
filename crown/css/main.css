@@ -1,19 +1,15 @@
 @import url(default.css);
 @import url(common.css);
 
-h1 {
-    font-size: 4rem;
+.event {
+    margin: 3.533rem 0 3.133rem 0;
 }
-h1 span {
-    font-size: 2rem;
-}
-
 .event h2 {
     color: #1d1d1d;
-    font-size: 50px;
+    margin: 0 0 5.333rem 0;
+    font-size: 3.333rem;
     font-weight: 700;
     line-height: 1;
-    margin: 2em 0 2em 0;
 }
 .event ul li {
     /* 넓이가 660px - 1400px에서 660px은 몇 %
@@ -31,13 +27,35 @@ h1 span {
        한 줄에 들어가야 하는 여백의 총합/li의 갯수 = 80px/2 = 40px
        li의 넓이: calc(100%/li갯수 - 한 줄 여백 총합/li 갯수) */
     width: calc(50% - 40px);
-    margin: 0 80px 0 0;
+    margin: 0 5.333rem 6.067rem 0;
 }
 .event ul li:nth-child(2),.event ul li:last-child {
     margin-right: 0;
 }
+.event ul li:nth-child(2),.event ul li:nth-child(4) {
+    margin-top: -11.6rem;
+}
+.event ul li a strong {
+    display: block;
+    margin: 0 0 0.867rem 0;
+    font-size: 1.667rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.event ul li a strong span {
+    display: block;
+    margin: 0 0 0.467rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
 .event ul li a img {
     width: 100%;
+    border-radius: 3.333rem;
+}
+.event .more {
+    position: absolute;
+    left: 13.6rem;
+    top: 4.167rem;
 }
 @media screen and (max-width:640px){
     .event h2 {
@@ -69,6 +87,7 @@ h1 span {
     background-repeat: no-repeat;
     /* background-size: 53% auto; 가로는 background를 주는 영역의 넓이의 몇 % 높이는 auto를 넓이 맞춰서 비율에 맞게 조정 */
     background-size: 176px auto; /* 배경 이미지 사이즈를 고정 px로 입력 */
+    box-shadow: 0.667rem 0.667rem 0.667rem rgba(0,0,0,0.1);
 }
 .product ul li:last-child {
     margin-right: 0;
@@ -84,6 +103,16 @@ h1 span {
 }
 .product ul li.pro4 {
     background-image: url(../images/main/product4.png);
+}
+.product ul li:nth-child(2),.product ul li:nth-child(4) {
+    margin-top: 3.933rem;
+}
+.product ul li {
+    transition: 0.3s;
+}
+.product ul li:hover {
+    transform: translate(-0.667rem, -0.667rem);
+    box-shadow: 0.667rem 0.667rem 0.667rem rgba(0,0,0,0.2);
 }
 .product ul li a {
     display: block;
@@ -108,10 +137,8 @@ h1 span {
     line-height: 1.5;
     height: 6em;
 }
-.product ul li a img {
-    /* width: 20%; a사이즈를 기준으로 20% 사이즈 */
 
-}
+
 @media screen and (max-width:1440px){
     .product ul li {
         background-size: 153px auto;
@@ -126,7 +153,48 @@ h1 span {
         margin: 0 0 3rem 0;
     }
 }
+@media screen and (max-width:1200px){
+    .event h2 {
+        margin: 0 0 5rem 0;
+        font-size: 2.9rem;
+    }
+    .event ul li {
+        margin: 0 5.333rem 2.5rem 0;
+    }
+    .event ul li a strong {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.3rem;
+    }
+    .event .more {
+        left: 11.9rem;
+        top: 3.267rem;
+    }
+    .event .more img {
+        width: 100%;
+    }
+}
 @media screen and (max-width:1050px){
+    .event h2 {
+        margin: 0 0 5rem 0;
+        font-size: 2.5rem;
+    }
+    .event ul li {
+        margin: 0 4.633rem 2.5rem 0;
+    }
+    .event ul li:nth-child(2) {
+        margin-top: -9.567rem;
+    }
+    .event ul li a strong {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+    }
+    .event .more {
+        left: 10.6rem;
+        top: 3rem;
+    }
+    .event .more img {
+        width: 80%;
+    }
     .product ul li {
         background-size: 140px auto;
     }
@@ -140,6 +208,9 @@ h1 span {
     .product ul li:nth-child(3) {
         margin-right: 0;
     }
+    .product ul li:nth-child(2),.product ul li:nth-child(4) {
+        margin-top: 3.2rem;
+    }
     .product ul li a h3 {
         font-size: 2rem;
     }
@@ -148,6 +219,30 @@ h1 span {
     }
 }
 @media screen and (max-width:787px){
+    .event h2 {
+        margin: 0 0 3.5rem 0;
+        font-size: 1.9rem;
+    }
+    .event ul li {
+        margin: 0 3.533rem 2rem 0;
+    }
+    .event ul li:nth-child(2) {
+        margin-top: -6.667rem;
+    }
+    .event ul li a strong {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+    }
+    .event ul li a strong span {
+        font-size: 0.867rem;
+    }
+    .event .more {
+        left: 8.4rem;
+        top: 2.1rem;
+    }
+    .event .more img {
+        width: 65%;
+    }
     .product ul li {
         width: calc(50% - 15px);
         margin: 0 30px 0 0;
@@ -158,11 +253,35 @@ h1 span {
     .product ul li:nth-child(3) {
         display: none;
     }
+    .product ul li:nth-child(2),.product ul li:nth-child(4) {
+        margin-top: 2.5rem;
+    }
     .product ul li a h3 {
         font-size: 1.6rem;
     }
 }
 @media screen and (max-width:484px){
+    .event h2 {
+        margin: 0 0 3.5rem 0;
+        font-size: 1.5rem;
+    }
+    .event ul li {
+        margin: 0 3.3rem 1.5rem 0;
+    }
+    .event ul li:nth-child(2) {
+        margin-top: -6.667rem;
+    }
+    .event ul li a strong {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+    }
+    .event .more {
+        left: 8.9rem;
+        top: 2.4rem;
+    }
+    .event .more img {
+        width: 55%;
+    }
     .product ul li {
         float: none;
         width: 100%;
@@ -171,6 +290,9 @@ h1 span {
     .product ul li:nth-child(2) {
         display: none;
     }
+    .product ul li:nth-child(2),.product ul li:nth-child(4) {
+        margin-top: 0;
+    }
     .product ul li a h3 {
         font-size: 1.333rem;
     }
@@ -178,3 +300,4 @@ h1 span {
         margin: 0 0 1.5rem 0;
     }
 }
+
