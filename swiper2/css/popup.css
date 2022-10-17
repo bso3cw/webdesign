@@ -1,0 +1,165 @@
+@import url(default.css);
+@import url(common.css);
+
+
+body {
+    padding-bottom: 100px;
+}
+.popup {
+    height: 800px;
+}
+.popup ul li .txt {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    color: #fff;
+    transform: translate(-50%, -50%); /* 해당 요소의 넓이를 기준으로 %를 계산 */
+    text-align: center;
+}
+.popup ul li .txt span {
+    display: block;
+}
+.popup ul li .txt strong {
+    display: block;
+    font-size: 45px;
+    font-weight: 700;
+}
+.popup ul li img { /* 팝업에 이미지를 img 태그로 처리한 경우 img에 주는 필수값 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup .btn_prev, .popup .btn_next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+}
+.popup .btn_prev {
+    left: 20px;
+}
+.popup .btn_next {
+    right: 20px;
+}
+.popup .btn_prev::before, .popup .btn_next::before {
+    position: absolute;
+    top: -39px;
+    width: 39px;
+    height: 78px;
+    background: url(../images/pop_arrow.svg) no-repeat center center / contain;
+    opacity: 0.6;
+    content: "";
+}
+.popup .btn_prev::before {
+    left: 0;
+}
+.popup .btn_next::before {
+    right: 0;
+    transform: rotate(180deg);
+}
+.popup .ctrl_wrap {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 21px;
+    z-index: 10;
+    transform: translate(-50%, 0);
+}
+/* css 스타일이 중복될 때 - 플러그인에서 준 스타일을 수정할 때
+   css 선택자를 우선 적용될 수 있도록 설계해야 함.
+   1. 더 먼 요소부터 선언함 (body부터 지정)
+   2. 스타일을 줄 요소를 정확하게 지칭해야 함.
+      태그명보다 스타일명이 더 정확한 지칭임 (적용 우선 순위가 높음)
+      span
+      .swiper-pagination-bullet
+      span.swiper-pagination-bullet
+    3. css가 우선 적용되지 않을 때
+       속성에 important를 추가해서 무조건 적용되게 한다.
+       예시, width: 14px !important; */
+.popup .paging span.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    opacity: 1;
+    background-color: #fff;
+}
+/* .popup .paging span.swiper-pagination-bullet-active
+   이렇게만 지칭하면 .popup .paging span.swiper-pagination-bullet 스타일과 충돌함.  */
+.popup .paging span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #118639;
+}
+.popup .btn_stop {
+    font-size: 0;
+    line-height: 0;
+    width: 18px;
+    height: 13px;
+    margin-left: 10px;
+    background-image: url(../images/pop_stop.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.popup .btn_stop.play {
+    background-image: url(../images/pop_play.svg);
+}
+@media screen and (max-width:1000px){
+    .popup {
+        height: 600px;
+    }
+    .popup ul li .txt strong {
+        font-size: 35px;
+    }
+    .popup .btn_prev::before, .popup .btn_next::before {
+        top: -19px;
+        width: 19px;
+        height: 39px;
+    }
+}
+@media screen and (max-width:640px){
+    .popup {
+        height: 400px;
+    }
+    .popup ul li .txt strong {
+        font-size: 20px;
+    }
+    .popup .btn_prev::before, .popup .btn_next::before {
+        display: none;
+    }
+}
+
+h1 {
+    margin: 50px 0 10px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.banner1 ul li img {
+    width: 100%; /* li의 사이즈에 맞춰서 가로를 꽉 채워 들어감 - 높이는 비율에 맞게 */
+}
+.banner1 ul li strong {
+    display: block;
+    font-size: 20px;
+}
+
+.banner2 ul li {
+    width: 320px;
+}
+.banner2 ul li img {
+    width: 100%; /* li의 사이즈에 맞춰서 가로를 꽉 채워 들어감 - 높이는 비율에 맞게 */
+}
+.banner2 ul li strong {
+    display: block;
+    font-size: 20px;
+}
+@media screen and (max-width:1000px){
+    .banner2 ul li {
+        width: 270px;
+    }
+}
+@media screen and (max-width:640px){
+    .banner2 ul li {
+        width: 150px;
+    }
+}

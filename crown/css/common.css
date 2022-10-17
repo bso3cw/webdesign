@@ -69,3 +69,178 @@ html, body {
 .skip_nav a:focus {
     top: 0;
 }
+
+.header {
+    height: 100px;
+}
+.header .logo {
+    float: left;
+    margin: 32px 0 0 0;
+    font-size: 0;
+    line-height: 0;
+}
+.header .logo img {
+    width: 165px;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 41px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100px;
+}
+@media screen and (max-width:1000px){
+    .header .logo {
+        margin: 35px 0 0 0;
+    }
+    .header .logo img {
+        width: 100px;
+    }
+    .header .gnb ul li a {
+        padding: 0 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:640px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        margin: 20px 0 0 0;
+    }
+    .header .logo img {
+        width: 84px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 22px 0 0 0;
+    }
+    .header .gnb .gnb_open img {
+        width: 20px;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+}
+
+.footer {
+    position: relative;
+}
+.footer .family {
+    position: absolute;
+    right: calc(50% - 700px);
+    /* wrapper 없이 컨텐츠 영역의 오른쪽 끝에 family를 배치
+       right: 50%에서 컨텐츠의 넓이 절반(700px)을 빼 줌 */
+    top: 129px;
+}
+.footer .family button {
+    width: 173px;
+    height: 35px;
+    border: 1px solid #ccc;
+    color: #666;
+}
+.footer .ftop {
+    height: 59px;
+    border-bottom: 1px solid #ededed;
+}
+.footer .ftop .fnav li {
+    position: relative;
+    float: left;
+    margin-right: 34px;
+}
+.footer .ftop .fnav li::after {
+    position: absolute;
+    right: -18px;
+    top: 25px;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    content: "";
+}
+.footer .ftop .fnav li:last-child::after {
+    display: none;
+}
+.footer .ftop .fnav li.privacy a {
+    font-weight: 700;
+}
+.footer .ftop .fnav li a {
+    display: block;
+    color: #666;
+    line-height: 59px;
+}
+.footer .fsub .flogo {
+    float: left;
+}
+.footer .fsub .flogo img {
+    width: 145px;
+    filter: grayscale(100%);
+}
+.footer .fsub .inner {
+    margin: 69px 0 109px 186px;
+    color: #666;
+}
+.footer .fsub .finfo span {
+    display: inline-block;
+    margin-right: 31px;
+    line-height: 22px;
+}
+.footer .fsub .copyright {
+    margin: 11px 0 0 0;
+}
+@media screen and (max-width:1440px){
+    .footer .family {
+        right: 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer .family {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 33px 0 20px 20px;
+    }
+    .footer .family button {
+        width: 142px;
+        height: 25px;
+    }
+    .footer .ftop {
+        height: auto;
+        border-bottom: 0;
+    }
+    .footer .ftop .fnav li {
+        margin-right: 29px;
+    }
+    .footer .ftop .fnav li::after {
+        right: -15px;
+        top: 7px;
+        height: 7px;
+    }
+    .footer .ftop .fnav li a {
+        line-height: 20px;
+    }
+    .footer .fsub .flogo {
+        display: none;
+    }
+    .footer .fsub .inner {
+        margin: 0;
+    }
+    .footer .fsub .finfo {
+        margin: 24px 0 0 0;
+    }
+    .footer .fsub .finfo span {
+        margin-right: 25px;
+        line-height: 17px;
+    }
+    .footer .fsub .copyright {
+        margin: 5px 0 60px 0;
+    }
+}

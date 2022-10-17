@@ -1,6 +1,79 @@
 @import url(default.css);
 @import url(common.css);
 
+.popup {
+    height: 394px;
+}
+.popup h2 {
+    display: none;
+}
+.popup .popup_round {
+    position: absolute;
+    right: calc(50% + 792px);
+    top: 0;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+}
+.popup .popup_round::before {
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background: url(../images/main/popup_round.svg) no-repeat left top / contain;
+    transform: rotate(90deg);
+    content: "";
+}
+.popup .popup_round::after {
+    position: absolute;
+    right: -70px;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    background: url(../images/main/popup_round.svg) no-repeat left top / contain;
+    content: "";
+}
+.popup ul li a img {
+    /* popup에서 높이를 제한해줘야 그 높이에 꽉 맞는 이미지가 가운데로 정렬 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup ul li a .mobile {
+    display: none;
+}
+@media screen and (max-width:1650px){
+    .popup .popup_round {
+        right: auto;
+        left: 0;
+        width: 20px;
+    }
+}
+@media screen and (max-width:1200px){
+    .popup {
+        height: 370px;
+    }
+}
+@media screen and (max-width:787px){
+    .popup {
+        height: 360px;
+    }
+}
+@media screen and (max-width:640px){
+    .popup {
+        height: 350px;
+    }
+    .popup ul li a .pc {
+        display: none;
+    }
+    .popup ul li a .mobile {
+        display: block;
+    }
+}
+
 .event {
     margin: 3.533rem 0 3.133rem 0;
 }
@@ -286,6 +359,7 @@
         float: none;
         width: 100%;
         margin: 0;
+        background-size: 100px auto;
     }
     .product ul li:nth-child(2) {
         display: none;
