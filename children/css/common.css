@@ -72,6 +72,99 @@ html, body {
 
 /* 브라우저에서 글자를 드래그했을 때 드래그한 영역의 색과 글자색
    -moz-selection 표준화 되지 않은 속성 */
-::selection{background:#f25100;color:#fff;}
-::-moz-selection{background:#f25100;color:#fff;}
-::-webkit-selection{background:#f25100;color:#fff;} 
+::selection{background:#E00D26;color:#fff;}
+::-moz-selection{background:#E00D26;color:#fff;}
+::-webkit-selection{background:#E00D26;color:#fff;}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.05);
+    color: #fff;
+}
+.header .logo {
+    float: left;
+    margin: 28px 0 0 40px;
+}
+.header .logo a {
+    display: block;
+    width: 192px;
+    height: 39px;
+    background-image: url(../images/common/logo_w.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb {
+    float: right;
+    margin: 0 56px 0 0;
+}
+.header .gnb .gnb_open {
+    display: none;
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 36px;
+    font-size: 20px;
+    line-height: 100px;
+}
+/* header가 고정 */
+.header.black {
+    /* background-color: #fff; */
+    /* box-shadow: 0 5px 10px rgba(0,0,0,0.1); */
+    color: #1d1d1d;
+}
+.header.black .logo a {
+    background-image: url(../images/common/logo.svg);
+}
+@media screen and (max-width:1200px){
+    .header .gnb ul li a {
+        padding: 0 30px;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:800px){
+    .header {
+        height: 60px;
+        background-color: transparent;
+    }
+    .header .logo {
+        margin: 18px 0 0 20px;
+    }
+    .header .logo a {
+        width: 104px;
+        height: 21px;
+    }
+    .header .gnb {
+        margin: 0;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 24px 20px 21px 20px;
+    }
+    .header .gnb .gnb_open span {
+        display: block;
+        width: 17px;
+        height: 2px;
+        margin-bottom: 3px;
+        border-radius: 1px;
+        background-color: #fff;
+        font-size: 0;
+        line-height: 0;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+    .header.black .gnb .gnb_open span {
+        background-color: #1d1d1d;
+    }
+}

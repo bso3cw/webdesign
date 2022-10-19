@@ -2,17 +2,269 @@
 @import url(common.css);
 
 .visual h2 {
-    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 12;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /* fullpage.js 플러그인에서 한 section에 글자 딱 하나만 존재할 때
+       해당 글자에 line-height이 들어가면 해당 section에서는 scroll이 작동되지 않을 수 있음 */
 }
 .visual video {
     position: absolute;
     right: 0;
     bottom: 0;
     top: 0;
+    z-index: 10;
     width: 100%;
     height: 100%;
     object-fit: cover; 
 }
+.visual .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* top, bottom, left, right를 모두 0으로 주면 width: 100%;, height: 100%;와 동일하게 적용됨 */
+    z-index: 11;
+    background-color: rgba(0,0,0,0.2);
+}
+@media screen and (max-width:1000px){
+    .visual h2 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width:800px){
+    .visual h2 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:640px){
+    .visual .inner {
+        height: 234px;
+    }
+    /* fullpage를 모바일에서 해제하고 높이를 제한해야 한다면 section class를 준 요소 말고
+       그 안에 있는 요소한테 높이를 줘야 함. */
+    .visual h2 {
+        font-size: 20px;
+    }
+}
+
+.count {
+    background-color: #926D49;
+    color: #fff;
+}
+.count .tit {
+    margin: 0 0 0 120px;
+}
+.count .tit h2 {
+    margin: 0 0 17px 0;
+    font-size: 40px;
+    line-height: 1.2;
+}
+.count .tit h2 strong {
+    font-weight: 700;
+}
+.count .tit p span {
+    display: block;
+}
+.count .rate {
+    position: absolute;
+    left: calc(50% + 140px);
+    top: 50%;
+    width: 50%;
+    transform: translate(0, -50%);
+}
+.count .rate li {
+    position: relative;
+    margin: 0 0 54px 0;
+}
+.count .rate li:last-child {
+    margin-bottom: 0;
+}
+.count .rate li::after {
+    position: absolute;
+    left: 0;
+    top: 86px;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+}
+.count .rate li .num strong {
+    display: inline-block;
+    background-color: #926D49;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.count .rate li .num span {
+    display: inline-block;
+    position: relative;
+    padding: 0 8px 0 8px;
+    background-color: #926D49;
+    font-size: 20px;
+    font-weight: 700;
+}
+/* .count .rate li .num span::after {
+    position: absolute;
+    left: 125%;
+    top: 23px;
+    width: 10000%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+} */
+@media screen and (max-width:1240px){
+    .count .tit h2 {
+        font-size: 25px;
+    }
+    .count .rate li .num strong {
+        font-size: 45px;
+    }
+    .count .rate li .num span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:800px){
+    .count {
+        padding: 20px 0 48px 0;
+    }
+    .count .tit {
+        margin: 0 0 36px 0;
+    }
+    .count .tit h2 {
+        margin: 0 0 7px 0;
+        font-size: 25px;
+        line-height: 1.1;
+    }
+    .count .tit p span {
+        display: inline;
+    }
+    .count .rate {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        transform: translate(0, 0);
+    }
+    .count .rate li {
+        margin: 0 0 35px 0;
+    }
+    .count .rate li::after {
+        top: 51px;
+        width: 150%;
+    }
+    .count .rate li .num strong {
+        font-size: 30px;
+    }
+    .count .rate li .num span {
+        padding: 0 5px 0 5px;
+        font-size: 15px;
+    }
+}
+.biz {
+    background-color: #FBEBD7;
+}
+.news {
+    background-color: #F9D2D2;
+}
+.support {
+
+}
+.footer {
+
+}
+
+/* 모바일에서 fullpage 적용 안 할 때 발생하는 오류 수정 */
+@media screen and (max-width:640px){
+    .fp-responsive .fp-is-overflow.fp-section {
+        min-height: auto !important;
+        /* fullpage.js에서 640px 이하일 때는 fullpage 적용하지 않도록 함.
+           min-height가 해제가 안 되서 이전 fullpage 높이가 잡힘
+           min-height: auto;를 줘야 함
+           visual에 min-height: auto; 적용되지 않음 (css 적용 우선순위에 밀림)
+           내가 적용하는 값을 먼저 적용하게 하는 게 min-height: auto !important;
+           
+           플러그인을 써서 내가 주지 않을 스타일을 고쳐서 쓸 때 !important; */
+    }
+    body .section .fp-overflow {
+        overflow: hidden;
+    }
+}
+/* 오른쪽 네비게이션 디자인 변경
+   선택자가 #fp-nav ul li인 것과 body #fp-nav ul li인 것이 동시에 존재한다면
+   body부터 선언한 요소가 먼저 적용됨. (단, 나머지 선택자는 동일) */
+body #fp-nav ul li {
+    width: 10px;
+    height: 10px;
+    margin: 12px;
+}
+body #fp-nav ul li:last-child {
+    display: none;
+}
+body #fp-nav ul li a span, body #fp-nav ul li:hover a span {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+body #fp-nav ul li a.active span, body #fp-nav ul li:hover a.active span {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #E00D26;
+}
+body #fp-nav ul li .fp-tooltip {
+    top: -7px;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Pretendard', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    max-width: max-content;
+    padding: 2px 7px 3px 6px;
+    overflow: visible;
+    width: auto;
+    background-color: #E00D26;
+    border-radius: 4px;
+}
+body #fp-nav ul li .fp-tooltip::after {
+    position: absolute;
+    right: -3px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background-color: #E00D26;
+    content: "";
+}
+
+/* 어두운 툴팁 */
+body #fp-nav.black ul li a span, body #fp-nav.black ul li:hover a span {
+    background: #ccc;
+}
+body #fp-nav.black ul li a.active span, body #fp-nav.black ul li:hover a.active span {
+    background-color: #E00D26;
+}
+body #fp-nav.black ul li .fp-tooltip {
+    color: #fff;
+    background-color: #E00D26;
+}
+body #fp-nav.black ul li .fp-tooltip::after {
+    background-color: #E00D26;
+}
+
+
+
+
 
 .fp-watermark {
     display: none;
