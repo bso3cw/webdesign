@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>Save The Children 보건영양</title>
@@ -28,6 +32,42 @@
             </nav>
         </header>
         <div id="fullpage"> <!-- fullpage 효과를 줄 모든 태그를 감싸는 요소 (이름 변경 가능) -->
+            <section class="section support">
+                <div class="wrapper">
+                    <div class="support_wrap">
+                        <div class="inner">
+                            <h2><strong>월 3만 원<em>이면,</em></strong><span>연간 10명의 아동에게 </span><span>학용품을 지원하고 </span><span>4명의 산모에게 </span>출산물품을 지원할 수 있습니다.</h2>
+                            <p>매월 정기후원을 통해, 더 많은 아이들에게 장기적인 도움을 주실 수 있습니다.</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <span>아동의 권리를 지켜주는 멋진 힘</span>
+                                    <strong>착한소비</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span>의미 있는 일상 savethegood#</span>
+                                    <strong>굿즈몰</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span>일시적인 지원부터 마을의 자립까지</span>
+                                    <strong>후원하기</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span>아동의 권리를 지켜주는 서명 활동</span>
+                                    <strong>서명하기</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="section visual"> <!-- class section을 주면 해당 요소는 한 페이지 (이름 변경 불가) -->
                 <div class="inner">
                     <h2>모든 아동은<br>건강하게 태어나 자랄<br>권리가 있습니다.</h2>
@@ -40,38 +80,81 @@
                 </div>
             </section>
             <section class="section count">
-                <div class="wrapper">
-                    <div class="tit">
-                        <h2><strong>매일 1만 4,200명</strong> 이상의<br>아동이 5살이 되기 전<br>목숨을 잃습니다.</h2>
-                        <p><span>세이브더칠드런은 예방 가능한 질병으로 사망하는 </span><span>5세 미만 아동이 없도록 산모와 신생아 및 영유아를 위한 </span>보건영양 사업을 진행합니다.</p>
+                    <div class="wrapper">
+                        <div class="tit">
+                            <h2><strong>매일 1만 4,200명</strong> 이상의<br>아동이 5살이 되기 전<br>목숨을 잃습니다.</h2>
+                            <p><span>세이브더칠드런은 예방 가능한 질병으로 사망하는 </span><span>5세 미만 아동이 없도록 산모와 신생아 및 영유아를 위한 </span>보건영양 사업을 진행합니다.</p>
+                        </div>
+                        <div class="rate">
+                            <ul>
+                                <li>
+                                    <div class="exp">매일 5세 미만 영유아 사망수</div>
+                                    <div class="num"><strong>14,200</strong><span>명 이상</span></div>
+                                </li>
+                                <li>
+                                    <div class="exp">매년 5세 미만 영유아 사망수</div>
+                                    <div class="num"><strong>5,200,000</strong><span>명</span></div>
+                                </li>
+                                <li>
+                                    <div class="exp">예방 가능한 질병으로 인한 사망 비율</div>
+                                    <div class="num"><strong>45.38</strong><span>%</span></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="rate">
-                        <ul>
-                            <li>
-                                <div class="exp">매일 5세 미만 영유아 사망수</div>
-                                <div class="num"><strong>14,200</strong><span>명 이상</span></div>
-                            </li>
-                            <li>
-                                <div class="exp">매년 5세 미만 영유아 사망수</div>
-                                <div class="num"><strong>5,200,000</strong><span>명</span></div>
-                            </li>
-                            <li>
-                                <div class="exp">예방 가능한 질병으로 인한 사망 비율</div>
-                                <div class="num"><strong>45.38</strong><span>%</span></div>
-                            </li>
-                        </ul>
+            </section>
+            <section class="section biz">
+                <div class="wrapper">
+                    <div class="biz_wrap">
+                        <img src="images/main/biz.png" alt="서로 껴안고 있는 남자아이와 여자아이 사진">
+                        <div class="inner">
+                            <a href="#n">
+                                <strong>보건영양 사업</strong>
+                                <h2>영양 및<br>생계지원 사업</h2>
+                                <p>장기적으로 아동 영양상태 개선 및 발육부진 예방을 위해 마을 주민 대상 식품 농업∙영양 교육과 텃밭 운영, 염소 배분 및 사육 교육,보건시설 영양 관련 서비스를 지원</p>
+                                <p class="exp">* 지원국가 : 우간다</p>
+                                <div class="more"></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="section biz">
-                <h2>세이브더칠드런 사업소개</h2>
-            </section>
             <section class="section news">
-                <h2>현장소식</h2>
+                <div class="wrapper cnt_wrap">
+                    <h2>현장소식과 이야기가 <span>궁금하세요?</span></h2>
+                    <div class="list swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span><img src="images/main/news01.png" alt="산 사진"></span>
+                                    <strong>에티오피아 파견직원의 일기 '메마른 땅에도 싹트는 희망'</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span><img src="images/main/news02.png" alt="테이블에 놓여진 우비, 카메라, 노트북, 가방 사진"></span>
+                                    <strong>라오스 파견 직원의 출장가방 들여다보기</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span><img src="images/main/news03.png" alt="공부하고 있는 흑인 아이 사진"></span>
+                                    <strong>숫자? 데이터? 진짜 성과는 이런 것이죠 - 해외 아동보호 담당 인터뷰</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <span><img src="images/main/news04.png" alt="여자아이의 공부를 봐주고 있는 여자 사진"></span>
+                                    <strong>1000일 가정방문 봉사활동으로 라오스 아이들이 건강하게 자라가요!</strong>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="btn_paging"></div>
+                    </div>
+                    <a href="#n" class="more">뉴스 더보기</a>
+                </div>
             </section>
-            <section class="section support">
-                <h2>지원 및 후원</h2>
-            </section>
+
             <footer class="section footer fp-auto-height">
                 <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치할 수 있음 -->
                 <div><br><br>footer<br><br></div>
