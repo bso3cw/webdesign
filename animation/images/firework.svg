@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="239.075" height="275.483" viewBox="0 0 239.075 275.483">
+  <g id="firework" transform="translate(-784.607 -614)" opacity="0.3">
+    <line id="선_1" data-name="선 1" y2="96.348" transform="translate(904.145 614)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_2" data-name="선 2" x2="83.439" y2="48.174" transform="translate(784.857 682.871)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_3" data-name="선 3" y1="48.174" x2="83.439" transform="translate(784.857 772.438)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_4" data-name="선 4" y1="96.348" transform="translate(904.145 793.135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_5" data-name="선 5" x1="83.439" y1="48.174" transform="translate(939.993 772.438)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_6" data-name="선 6" x1="83.439" y2="48.174" transform="translate(939.993 682.871)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_7" data-name="선 7" y2="96.348" transform="translate(904.145 614)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_8" data-name="선 8" x2="83.439" y2="48.174" transform="translate(784.857 682.871)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_9" data-name="선 9" y1="48.174" x2="83.439" transform="translate(784.857 772.438)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_10" data-name="선 10" y1="96.348" transform="translate(904.145 793.135)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_11" data-name="선 11" x1="83.439" y2="48.174" transform="translate(939.993 682.871)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_12" data-name="선 12" x1="32.277" y2="57.455" transform="translate(918.012 669.602)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_13" data-name="선 13" x2="33.619" y2="56.68" transform="translate(856.082 670.71)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_14" data-name="선 14" y1="0.775" x2="65.896" transform="translate(809.938 752.074)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_15" data-name="선 15" y1="57.455" x2="32.277" transform="translate(858 776.426)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_16" data-name="선 16" x1="33.619" y1="56.68" transform="translate(918.588 776.093)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_17" data-name="선 17" x1="65.896" y2="0.775" transform="translate(932.455 750.634)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_18" data-name="선 18" x1="32.277" y2="57.455" transform="translate(918.012 669.602)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_19" data-name="선 19" x2="33.619" y2="56.68" transform="translate(856.082 670.71)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_20" data-name="선 20" y1="0.775" x2="65.896" transform="translate(809.938 752.074)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_21" data-name="선 21" y1="57.455" x2="32.277" transform="translate(858 776.426)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_22" data-name="선 22" x1="65.896" y2="0.775" transform="translate(932.455 750.634)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
