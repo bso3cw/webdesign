@@ -1,4 +1,4 @@
-#백성웅의 코딩자료
+# 백성웅의 코딩자료
 ## pc형 홈페이지 디자인 & 퍼블리싱
 - 대전복합터미널: https://bso3cw.github.io/webdesign/djbus/index.html
 - 심폴: https://bso3cw.github.io/webdesign/simpol/index.html
