@@ -151,13 +151,9 @@ $(document).ready(function(){
         slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 28, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            640: {    /* 640px 이상일 때 적용 */
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
             800: {    /* 800px 이상일 때 적용 */
                 slidesPerView: 3,
-                spaceBetween: 35,
+                spaceBetween: 30,
             },
             1000: {    /* 800px 이상일 때 적용 */
                 slidesPerView: 4,
