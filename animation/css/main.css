@@ -90,6 +90,248 @@
 .tour ul li.ico4 a:hover .up_wrap {
     height: 100%;
 }
+.tour ul li.ico5 a:hover i {
+    animation-name: ico_rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes ico_rotate {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}
+.tour .circle_txt {
+    position: absolute;
+    right: -93px;
+    top: 29px;
+    width: 250px;
+    height: 250px;
+    background: url(../images/circle_txt.svg) no-repeat right bottom / contain;
+    animation-name: circle_rotate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.tour .circle {
+    position: absolute;
+    left: -136px;
+    top: 19px;
+    width: 169px;
+    height: 169px;
+    background: url(../images/circle.svg) no-repeat center center;
+    animation-name: circle_rotate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes circle_rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+.tour .fireworks {
+    position: absolute;
+    background: url(../images/firework.svg) no-repeat center center / contain;
+    animation-name: fireworks_ani;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.tour .fireworks.pos1 {
+    left: -55px;
+    top: 310px;
+    width: 240px;
+    height: 240px;
+    animation-duration: 5s;
+}
+.tour .fireworks.pos2 {
+    right: -300px;
+    bottom: 444px;
+    width: 200px;
+    height: 200px;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+.tour .fireworks.pos3 {
+    left: 50%;
+    top: 488px;
+    width: 105px;
+    height: 105px;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes fireworks_ani {
+    0% {opacity: 0; transform: scale3d(0,0,1);}
+    30% {opacity: 1; transform: scale3d(1,1,1);}
+    70% {opacity: 1; transform: scale3d(1,1,1);}
+    100% {opacity: 0; transform: scale3d(1.5,1.5,1);}
+}
+
+
+.media h2 {
+    margin: 88px 0 30px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.media ul li {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 440px;
+    margin: 0 40px 0 0;
+}
+.media ul li:last-child {
+    margin-right: 0;
+}
+.media ul li a {
+    display: block;
+}
+.media ul li.list1 a {
+    height: 390px;
+    padding: 16px 30px 0 30px;
+    border: 1px solid #ccc;
+}
+.media ul li.list1 a .pic {
+    overflow: hidden;
+    height: 261px;
+}
+.media ul li.list1 a .pic img {
+    /* 감싸는 영역에서 overflow: hidden;으로 이미지를 제한할 때
+       이미지를 block, width/height: 100%;, object-fit: cover;를 주면 영역에 꽉 차게
+       위치는 좌우에 가운데, 위아래 가운데에 배치 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list1 a h3 {
+    margin: 13px 0 0 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 41px 35px 0 30px;
+    background-color: #D54B4B;
+    color: #fff;
+}
+.media ul li.list1 a .over strong {
+    display: block;
+    margin: 0 0 30px 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over .txt {
+    display: block;
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 1.5;
+    height: 9em;
+}
+.media ul li.list1 a .over .date {
+    display: block;
+    margin: 43px 0 0 0;
+    font-size: 17px;
+}
+/* 애니메이션 */
+.media ul li.list1 a .over {
+    transition: 0.5s;
+}
+.media ul li.list1 a:hover .over {
+    top: 0;
+}
+.media ul li.list2 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list2 a h3 {
+    position: absolute;
+    left: 31px;
+    top: 272px;
+    width: calc(100% - 62px);
+    color: #fff;
+    font-size: 25px;
+}
+.media ul li.list2 a p {
+    opacity: 0;
+    position: absolute;
+    left: 31px;
+    top: 350px;
+    width: calc(100% - 62px);
+    font-size: 17px;
+    color: #fff;
+}
+/* 마우스 오버 효과 */
+.media ul li.list2 a .pic::after {
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute; /* li의 position: relative;를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.3); */
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8));
+    content: "";
+}
+.media ul li.list2 a:hover .pic::after {
+    opacity: 1;
+}
+.media ul li.list2 a h3 {
+    transition: 0.5s;
+}
+.media ul li.list2 a p {
+    transition: 0.5s;
+}
+.media ul li.list2 a:hover h3 {
+    top: 234px;
+}
+.media ul li.list2 a:hover p {
+    opacity: 1;
+    top: 283px;
+}
+.media ul li.list3 a .pic {
+    overflow: hidden;
+    height: 278px;
+}
+.media ul li.list3 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list3 a h3 {
+    margin: 13px 0;
+    font-size: 25px;
+}
+.media ul li.list3 a h3::after {
+    position: absolute;
+    left: 0;
+    bottom: 55px;
+    width: 0;
+    height: 2px;
+    background-color: #3d3d3d;
+    content: "";
+}
+.media ul li.list3 a p {
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 1.5;
+    height: 3em;
+}
+/* 애니메이션 */
+.media ul li.list3 a h3::after {
+    transition: 0.5s;
+}
+.media ul li.list3 a:hover h3::after {
+    width: 100%;
+}
+
+
 
 
 .slide {
@@ -135,4 +377,44 @@
 @keyframes size100 {
     0% {width: 0;}
     100% {width: 100%;}
+}
+
+
+.menu {
+    margin: 100px;
+}
+.menu .gnb_open {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #3d3d3d;
+}
+.menu .gnb_open span {
+    position: absolute;
+    left: 40px;
+    width: 120px;
+    height: 10px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.menu .gnb_open span.line1 {
+    top: 50px;
+}
+.menu .gnb_open span.line2 {
+    top: 90px;
+}
+.menu .gnb_open span.line3 {
+    top: 130px;
+}
+.menu .gnb_open:hover span.line1 {
+    transform: translate(0, 40px) rotate(45deg);
+}
+.menu .gnb_open:hover span.line2 {
+    transform: translate(-170px, 0);
+    opacity: 0;
+}
+.menu .gnb_open:hover span.line3 {
+    transform: translate(0, -40px) rotate(-45deg);
 }
