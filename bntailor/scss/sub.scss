@@ -1,0 +1,13 @@
+@import "_var.scss";
+@import "_default.scss";
+@import "_common.scss";
+
+/* 서브 레이아웃 */
+
+.container {
+    svg {
+        path {
+            fill: #C9A484;
+        }
+    }
+}
