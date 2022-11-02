@@ -54,23 +54,37 @@
                 </div>
                 <div class="tit">About Us</div>
             </div>
+            <div class="sub_visual_bg"></div>
+            <div class="sub_visual_path">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="sub_visual_path" clipPathUnits="objectBoundingBox" transform="scale(0.00078125,0.0013888888888889)">
+                        <path d="M-16175.171,3445.169l-201.327-133.322V2723.5h1921v584.945l-1719.673,136.725Z" transform="translate(16376 -2724)"/>
+                    </clipPath>
+                </svg>
+            </div>
+              <!-- svg에 clip-path를 추가하면 svg는 화면에 출력되지 않음
+                   css에서 clip-path로 사용하기 위해서 변환한 것
+                   svg가 눈에 안 보이는 것 뿐, 공간은 차지함
+                   display: none;으로 숨기면 clip-path 효과가 사라짐 (적용이 안 됨)
+                   absolute로 한 쪽으로 치워 두고 svg를 선택해서 1px로 작게 수정 -->
         </div>
         <nav class="lnb"> <!-- local navigation bar -->
             <div class="wrapper">
-                <ul>
-                    <!-- 현재 메뉴 active class 추가 -->
-                    <li class="active"><a href="#n">Chairman</a></li>
-                    <li><a href="#n">Family</a></li>
-                    <li><a href="#n">Our Business</a></li>
-                </ul>
+                <div class="lnb_wrap">
+                    <ul>
+                        <!-- 현재 메뉴 active class 추가 -->
+                        <li class="active"><a href="#n">Chairman</a></li>
+                        <li><a href="#n">Family</a></li>
+                        <li><a href="#n">Our Business</a></li>
+                        <li><a href="#n">Our Business</a></li>
+                        <li><a href="#n">Our Business</a></li>
+                        <li><a href="#n">Our Business</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div class="container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1921.999" height="722.67" viewBox="0 0 1921.999 722.67">
-                <g id="sub_visual_bg" transform="translate(0.998 1.001)">
-                  <path id="빼기_3" data-name="빼기 3" d="M-16175.171,3445.169l-201.327-133.322V2723.5h1921v584.945l-1719.673,136.725Z" transform="translate(16376 -2724)" stroke="#707070" stroke-width="1"/>
-                </g>
-              </svg>              
+            
         </div>
         <footer class="footer">
             <div class="wrapper">

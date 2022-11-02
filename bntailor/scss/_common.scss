@@ -88,6 +88,12 @@ html, body {
     .logo {
         float: left;
         margin: 27px 0 0 40px;
+        svg {
+            width: 161px;
+            text {
+                fill: #fff;
+            }
+        }
     }
     .gnb {
         float: right;
@@ -122,7 +128,7 @@ html, body {
         .logo {
             margin: 27px 0 0 40px;
             a {
-                img {
+                svg {
                     width: 120px;
                 }
             }
@@ -146,7 +152,7 @@ html, body {
         .logo {
             margin: 30px 0 0 40px;
             a {
-                img {
+                svg {
                     width: 100px;
                 }
             }
@@ -170,7 +176,7 @@ html, body {
         height: 70px;
         .logo {
             margin: 17px 0 0 20px;
-            a img {
+            a svg {
                 width: 97px;
             }
         }
