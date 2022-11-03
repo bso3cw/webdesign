@@ -1,1 +1,158 @@
+@import "_var.scss";
 /* 각각의 콘텐츠 페이지 스타일 */
+/* Chairman > About Us > B&TAILOR */
+.cts_about {
+    margin: 33px 0 0 0;
+    .about_top {
+        position: relative;
+        padding: 123px 0 0 0;
+        p {
+            @include font_serif;
+            position: absolute;
+            top: 288px;
+            left: 70px;
+            color: $w_tit_color;
+            font-size: 20px;
+        }
+        span {
+            @include font_serif;
+            position: absolute;
+            top: 321px;
+            left: 70px;
+            color: $w_tit_color;
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: calc(50% + 151px);
+        }
+        .bg {
+            height: 613px;
+            background: url(/webdesign/bntailor/images/contents/about_top_bg.png) no-repeat center center / cover;
+        }
+    }
+    .about_sub {
+        position: relative;
+        z-index: 10;
+        padding: 46px 0 0 71px;
+        margin-top: -198px;
+        margin-left: 440px;
+        width: calc(50% + 260px);
+        background-color: #fff;
+        .inner {
+            width: 889px;
+        }
+        .tit {
+            @include font_serif;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .cnt {
+            margin: 24px 0 53px 0;
+            font-size: 22px;
+        }
+        .sign {
+            font-size: 30px;
+            text-align: right;
+            margin: 0 0 154px 0;
+        }
+    }
+}
+@media screen and (max-width:1440px){
+    .cts_about {
+        margin: 20px 0 0 0;
+        .about_top {
+            padding: 70px 0 0 0;
+            p {
+                top: 230px;
+                font-size: 18px;
+            }
+            span {
+                top: 260px;
+                font-size: 35px;
+                line-height: 1.2;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: calc(50% + 100px);
+            }
+            .bg {
+                height: 450px;
+            }
+        }
+        .about_sub {
+            padding: 30px 0 0 50px;
+            margin-top: -180px;
+            margin-left: 400px;
+            width: calc(50% + 300px);
+            .inner {
+                width: 880px;
+            }
+            .tit {
+                font-size: 30px;
+            }
+            .cnt {
+                margin: 15px 0 30px 0;
+                font-size: 18px;
+            }
+            .sign {
+                font-size: 25px;
+                margin: 0 0 120px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .cts_about {
+        margin: 11px 0 0 0;
+        .about_top {
+            padding: 31px 0 0 0;
+            p {
+                top: calc(50% - 20px);
+                left: 20px;
+                font-size: 13px;
+            }
+            span {
+                top: calc(50% + 3px);
+                left: 20px;
+                font-size: 17px;
+            }
+            img {
+                left: calc(50% + 25px);
+                width: 35%;
+            }
+            .bg {
+                height: 150px;
+                background: url(/webdesign/bntailor/images/contents/about_top_bg_m.png);
+            }
+        }
+        .about_sub {
+            z-index: 10;
+            padding: 0;
+            margin-top: 0;
+            margin-left: 0;
+            width: auto;
+            background-color: #fff;
+            .inner {
+                width: auto;
+                padding: 5px 0 0 0;
+            }
+            .tit {
+                display: none;
+            }
+            .cnt {
+                margin: 15px 0 25px 0;
+                font-size: 13px;
+            }
+            .sign {
+                font-size: 18px;
+                text-align: left;
+                margin: 0 0 61px 0;
+            }
+        }
+    }
+}

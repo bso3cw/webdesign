@@ -89,12 +89,12 @@
 }
 @media screen and (max-width:1000px){
     .sub_visual {
-        height: 400px;
+        height: 500px;
         .sub_visual_bg {
             height: 100%;
         }
         .location {
-            padding: 300px 0 0 0;
+            padding: 220px 0 0 0;
             span {
                 position: relative;
                 margin-right: 16px;
@@ -119,6 +119,7 @@
 }
 @media screen and (max-width:640px){
     .sub_visual {
+        margin: 0;
         height: 315px;
         .sub_visual_bg {
             height: 100%;
@@ -143,14 +144,21 @@
 }
 
 .lnb {
-    height: 132px;
+    height: 98px;
     .lnb_wrap {
+        overflow-x: auto; /* lnb_wrap의 넓이보다 ul의 넓이가 더 길어질 때만 스크롤 바 생성 */
+        overflow-y: hidden;
         ul {
+            white-space: nowrap;
+            /* block 요소는 안 됨, float 들어간 요소도 안 됨
+               inline 요소나 inline-block만 적용됨
+               단, inline-block 요소의 사이에 space 한 칸의 여백이 들어감
+               요소들 사이의 여백을 이를 감안해서 줄이면 됨 */
             li {
-                float: left;
+                display: inline-block;
                 a {
                     display: block;
-                    padding: 0 30px;
+                    padding: 0 25px;
                     color: #666;
                     font-size: 30px;
                     font-weight: 700;
@@ -166,13 +174,84 @@
                         color: #3d3d3d;
                         &::after {
                             position: absolute;
-                            right: 20px;
+                            right: 15px;
                             bottom: 5px;
                             width: 5px;
                             height: 5px;
                             border-radius: 50%;
                             background-color: #C9A484;
                             content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1000px){
+    .lnb {
+        height: 132px;
+        .lnb_wrap {
+            overflow-x: auto;
+            overflow-y: hidden;
+            ul {
+                white-space: nowrap;
+                li {
+                    display: inline-block;
+                    a {
+                        display: block;
+                        padding: 0 25px;
+                        font-size: 22px;
+                    }
+                    &:first-child {
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+                    &.active {
+                        a {
+                            position: relative;
+                            color: #3d3d3d;
+                            &::after {
+                                position: absolute;
+                                right: 15px;
+                                bottom: 5px;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: #C9A484;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .lnb {
+        height: 33px;
+        .lnb_wrap {
+            overflow-x: auto;
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        padding: 11px 15px 0 15px;
+                        font-size: 15px;
+                    }
+                    &.active {
+                        a {
+                            position: relative;
+                            color: #3d3d3d;
+                            &::after {
+                                position: absolute;
+                                right: 8px;
+                                bottom: 5px;
+                                width: 3px;
+                                height: 3px;
+                            }
                         }
                     }
                 }
