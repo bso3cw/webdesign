@@ -116,12 +116,6 @@ html, body {
             }
         }
     }
-    &.fixed { /* header.fixed */
-        position: fixed;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px); // 브라우저 호환성
-        background-color: rgba(0,0,0,0.2);
-    }
 }
 @media screen and (max-width:1440px){
     .header {

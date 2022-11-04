@@ -213,12 +213,6 @@ html, body {
   font-size: 20px;
   line-height: 100px;
 }
-.header.fixed { /* header.fixed */
-  position: fixed;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
 @media screen and (max-width: 1440px) {
   .header .logo {
@@ -488,6 +482,13 @@ html, body {
 }
 /* scss 내에서 import할 default와 common 등의 파일은 파일명 앞에 _(언더바)를 입력하면 sass 컴파일러가 해당 파일은 컴파일하지 않음
    main.css나 sub.css에서 default, common을 필요에 따라서 import해서 사용하면 됨. */
+.header.fixed { /* header.fixed */
+  position: fixed;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 .visual {
   position: relative;
 }

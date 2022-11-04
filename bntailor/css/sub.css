@@ -213,12 +213,6 @@ html, body {
   font-size: 20px;
   line-height: 100px;
 }
-.header.fixed { /* header.fixed */
-  position: fixed;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.2);
-}
 
 @media screen and (max-width: 1440px) {
   .header .logo {
@@ -486,6 +480,22 @@ html, body {
     margin: 10px 0 0 0;
   }
 }
+.header.fixed {
+  position: fixed;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header.fixed .logo svg text {
+  fill: #1d1d1d;
+}
+.header.fixed .gnb .gnb_wrap ul li a {
+  color: #1d1d1d;
+}
+.header.fixed .gnb .gnb_open span {
+  background-color: #1d1d1d;
+}
+
 /* 서브 레이아웃 */
 .sub_visual {
   position: relative;
@@ -631,7 +641,24 @@ html, body {
   }
 }
 .lnb {
+  position: relative;
   height: 98px;
+}
+.lnb .lnb_fix {
+  /* 나중에 fixed로 변경 될 콘텐츠 - absolute로 코딩하는 게 좋음 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 98px;
+}
+.lnb.fixed .lnb_fix {
+  position: fixed;
+  top: 100px; /* header 높이만큼 아래로 */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .lnb .lnb_wrap {
   overflow-x: auto; /* lnb_wrap의 넓이보다 ul의 넓이가 더 길어질 때만 스크롤 바 생성 */
