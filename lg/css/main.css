@@ -119,15 +119,6 @@ header.fixed .tnb button i {
     background-size: cover;
     color: #fff
 }
-.visual::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    content: "";
-}
 .visual .inner { /* before 검은 색보다 글자를 위에 배치하기 위해서 */
     position: relative;
     z-index: 1;
