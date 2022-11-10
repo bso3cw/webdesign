@@ -17,6 +17,10 @@ $(document).ready(function(){
     })
 
 
+    $('.cnts .list li h2').on('click',function(){
+        $('.cnts ul.list>li').removeClass('active')
+        $(this).parent().addClass('active')
+    })
 
 
 

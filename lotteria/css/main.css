@@ -355,6 +355,9 @@
 .burger .more i {
   font-size: 25px;
 }
+.burger .more i.add {
+  display: none;
+}
 
 @media screen and (max-width: 1440px) {
  
@@ -583,26 +586,7 @@
     width: 27px;
     height: 27px;
   }
-  .burger .more::before {
-    position: absolute;
-    left: 49%;
-    top: 28%;
-    width: 1px;
-    height: 12px;
-    background-color: #E60012;
-    content: "";
-    border-radius: 20px;
-  }
-  .burger .more::after {
-    position: absolute;
-    left: 30%;
-    top: 48%;
-    width: 12px;
-    height: 1px;
-    background-color: #E60012;
-    content: "";
-    border-radius: 20px;
-  }
+  
   .burger .more a {
     margin: 0;
   }
@@ -612,4 +596,962 @@
   .burger .more i {
     display: none;
   }
+  .burger .more i.add {
+    margin: 0 0 4px 0;
+    display: block;
+    color: #E60012;
+    font-size: 27px;
+  }
 }
+
+.cnts {
+  height: 884px;
+  padding: 68px 0 112px 0;
+}
+.cnts ul.list {
+  position: relative;
+}
+.cnts ul.list>li {
+  float: left;
+  margin: 0 40px 0 0;
+}
+.cnts .list li h2 {
+  margin: 0 0 56px 0;
+  font-size: 60px;
+  font-weight: 400;
+  color: #ccc;
+}
+.cnts .list li.active h2 {
+  font-weight: 700;
+  color: #1d1d1d;
+}
+.cnts ul li.active .detail {
+  display: block;
+}
+.cnts ul li .detail {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 133px;
+  width: 100%;
+}
+.cnts ul li.active .detail {
+  display: block;
+}
+.cnts ul li .detail ul {
+  width: 1440px;
+}
+.cnts ul li .detail ul li {
+  overflow: hidden;
+  float: left;
+  margin: 0 40px 0 0;
+  width: 440px;
+  border-radius: 40px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.cnts ul li .detail ul li:last-child {
+  margin-right: 0;
+}
+.cnts ul li .detail ul li a {
+  display: block;
+  width: 440px;
+  height: 566px;
+}
+.cnts ul li .detail ul li a img {
+  width: 100%;
+  height: 426px;
+  object-fit: cover;
+}
+.cnts ul li .detail ul li a p {
+  margin: 16px 20px 14px 40px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.cnts ul li .detail ul li a span {
+  margin: 0 0 34px 40px;
+  color: #666;
+}
+.cnts ul li .detail.notice ul li a p {
+  margin: 16px 40px 28px 39px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.cnts ul li .detail.notice ul li a span {
+  margin: 0 0 34px 39px;
+}
+.cnts ul li .btn_wrap {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.cnts ul li.active .btn_wrap {
+  display: block;
+}
+.cnts ul li .btn_wrap button {
+  position: absolute;
+  top: 0;
+  right: 255px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.cnts ul li .btn_wrap button.on {
+  right: 191px;
+}
+.cnts ul li .btn_wrap button span {
+  display: none;
+}
+.cnts ul li .btn_wrap button i {
+  margin: 5px 0 0 0;
+  font-size: 20px;
+  color: #ccc;
+}
+.cnts ul li .btn_wrap button.on i {
+  color: #3d3d3d;
+}
+.cnts ul li .btn_wrap a {
+  display: block;
+  width: 164px;
+  height: 44px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+}
+.cnts ul li .btn_wrap a span {
+  float: left;
+  margin: 10px 0 0 23px;
+  font-size: 18px;
+}
+.cnts ul li .btn_wrap a i.pc {
+  float: right;
+  margin: 10px 12px 0 0;
+}
+.cnts ul li .btn_wrap a i.mobile {
+  display: none;
+}
+@media screen and (max-width: 1440px) {
+  .cnts {
+    height: 800px;
+    padding: 73px 0 112px 0;
+  }
+  .cnts ul.list {
+    position: relative;
+  }
+  .cnts ul.list>li {
+    margin: 0 35px 0 0;
+  }
+  .cnts .list li h2 {
+    margin: 0 0 40px 0;
+    font-size: 55px;
+    font-weight: 400;
+    color: #ccc;
+  }
+  .cnts .list li.active h2 {
+    font-weight: 700;
+    color: #1d1d1d;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail {
+    display: none;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: absolute;
+    left: 0;
+    top: 115px;
+    width: calc(100% + 80px);
+    padding: 0 0 18px 0;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail ul {
+    width: 1440px;
+  }
+  .cnts ul li .detail ul li {
+    margin: 0 35px 0 0;
+    width: 430px;
+  }
+  .cnts ul li .detail ul li a {
+    width: 430px;
+    height: 520px;
+  }
+  .cnts ul li .detail ul li a img {
+    height: 380px;
+  }
+  .cnts ul li .detail ul li a p {
+    margin: 13px 30px 14px 30px;
+    font-size: 17px;
+  }
+  .cnts ul li .detail ul li a span {
+    margin: 0 0 34px 30px;
+    font-size: 15px;
+  }
+  .cnts ul li .detail.notice ul li a p {
+    margin: 16px 30px 28px 35px;
+    font-size: 23px;
+  }
+  .cnts ul li .detail.notice ul li a span {
+    margin: 0 0 34px 35px;
+  }
+  .cnts ul li .btn_wrap {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .cnts ul li.active .btn_wrap {
+    display: block;
+  }
+  .cnts ul li .btn_wrap button {
+    position: absolute;
+    top: 3px;
+    right: 255px;
+    width: 40px;
+    height: 40px;
+  }
+  .cnts ul li .btn_wrap button.on {
+    right: 191px;
+  }
+  .cnts ul li .btn_wrap button span {
+    display: none;
+  }
+  .cnts ul li .btn_wrap button i {
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    color: #ccc;
+  }
+  .cnts ul li .btn_wrap button.on i {
+    color: #3d3d3d;
+  }
+  .cnts ul li .btn_wrap a {
+    display: block;
+    width: 164px;
+    height: 44px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+  }
+  .cnts ul li .btn_wrap a span {
+    float: left;
+    margin: 10px 0 0 23px;
+    font-size: 17px;
+  }
+  .cnts ul li .btn_wrap a i.pc {
+    float: right;
+    margin: 10px 12px 0 0;
+    font-size: 24px;
+  }
+  .cnts ul li .btn_wrap a i.mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .cnts {
+    height: 750px;
+    padding: 73px 0 112px 0;
+  }
+  .cnts .list li h2 {
+    margin: 0 0 56px 0;
+    font-size: 50px;
+    font-weight: 400;
+    color: #ccc;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail {
+    display: none;
+    width: calc(100% + 170px);
+    position: absolute;
+    left: 0;
+    top: 100px;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail ul {
+    width: 1440px;
+  }
+  .cnts ul li .detail ul li {
+    margin: 0 35px 0 0;
+    width: 400px;
+  }
+  .cnts ul li .detail ul li a {
+    width: 400px;
+    height: 480px;
+  }
+  .cnts ul li .detail ul li a img {
+    height: 340px;
+  }
+  .cnts ul li .detail ul li a p {
+    margin: 13px 30px 14px 25px;
+    font-size: 16px;
+  }
+  .cnts ul li .detail ul li a span {
+    margin: 0 0 34px 25px;
+    font-size: 14px;
+  }
+  .cnts ul li .detail.notice ul li a p {
+    margin: 16px 30px 28px 35px;
+    font-size: 23px;
+  }
+  .cnts ul li .detail.notice ul li a span {
+    margin: 0 0 34px 35px;
+  }
+  .cnts ul li .btn_wrap {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .cnts ul li.active .btn_wrap {
+    display: block;
+  }
+  .cnts ul li .btn_wrap button {
+    position: absolute;
+    top: 5px;
+    right: 240px;
+    width: 38px;
+    height: 38px;
+  }
+  .cnts ul li .btn_wrap button.on {
+    right: 180px;
+  }
+  .cnts ul li .btn_wrap button span {
+    display: none;
+  }
+  .cnts ul li .btn_wrap button i {
+    margin: 6px 0 0 0;
+    font-size: 18px;
+    color: #ccc;
+  }
+  .cnts ul li .btn_wrap button.on i {
+    color: #3d3d3d;
+  }
+  .cnts ul li .btn_wrap a {
+    width: 164px;
+    height: 44px;
+  }
+  .cnts ul li .btn_wrap a span {
+    float: left;
+    margin: 10px 0 0 23px;
+    font-size: 17px;
+  }
+  .cnts ul li .btn_wrap a i.pc {
+    float: right;
+    margin:13px 12px 0 0;
+    font-size: 20px;
+  }
+  .cnts ul li .btn_wrap a i.mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cnts {
+    height: 650px;
+    padding: 50px 0 112px 0;
+  }
+  .cnts ul.list>li {
+    margin: 0 25px 0 0;
+  }
+  .cnts .list li h2 {
+    margin: 0 0 50px 0;
+    font-size: 35px;
+  }
+  .cnts ul li .detail {
+    display: none;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: calc(100% + 170px);
+    position: absolute;
+    left: 0;
+    top: 90px;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail ul {
+    width: 1190px;
+  }
+  .cnts ul li .detail ul li {
+    margin: 0 30px 0 0;
+    width: 320px;
+  }
+  .cnts ul li .detail ul li a {
+    width: 340px;
+    height: 420px;
+  }
+  .cnts ul li .detail ul li a img {
+    height: 290px;
+  }
+  .cnts ul li .detail ul li a p {
+    margin: 13px 30px 14px 25px;
+    font-size: 15px;
+  }
+  .cnts ul li .detail ul li a span {
+    margin: 0 0 34px 25px;
+    font-size: 14px;
+  }
+  .cnts ul li .detail.notice ul li a p {
+    margin: 16px 20px 28px 25px;
+    font-size: 18px;
+  }
+  .cnts ul li .detail.notice ul li a span {
+    margin: 0 0 34px 25px;
+  }
+  .cnts ul li .btn_wrap {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .cnts ul li.active .btn_wrap {
+    display: block;
+  }
+  .cnts ul li .btn_wrap button {
+    position: absolute;
+    top: 5px;
+    right: 200px;
+    width: 34px;
+    height: 34px;
+  }
+  .cnts ul li .btn_wrap button.on {
+    right: 140px;
+  }
+  .cnts ul li .btn_wrap button span {
+    display: none;
+  }
+  .cnts ul li .btn_wrap button i {
+    margin: 6px 0 0 0;
+    font-size: 15px;
+  }
+  .cnts ul li .btn_wrap a {
+    width: 124px;
+    height: 40px;
+  }
+  .cnts ul li .btn_wrap a span {
+    float: left;
+    margin: 12px 0 0 23px;
+    font-size: 14px;
+  }
+  .cnts ul li .btn_wrap a i.pc {
+    margin:14px 12px 0 0;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .cnts {
+    height: 450px;
+    padding: 39px 0 49px 0;
+  }
+  .cnts ul.list>li {
+    float: left;
+    margin: 0 16px 0 0;
+  }
+  .cnts .list li h2 {
+    margin: 0 0 14px 0;
+    font-size: 25px;
+  }
+  .cnts ul li .detail {
+    width: 100%;
+    top: 50px;
+    padding: 0 0 18px 0;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail ul {
+    width: 948px;
+  }
+  .cnts ul li .detail ul li {
+    margin: 0 16px 0 0;
+    width: 300px;
+    border-radius: 30px;
+    box-shadow: 0;
+  }
+  .cnts ul li .detail ul li a {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+  .cnts ul li .detail ul li a img {
+    width: 100%;
+    height: 100%;
+  }
+  .cnts ul li .detail ul li a p {
+    display: none;
+  }
+  .cnts ul li .detail ul li a span {
+    display: none;
+  }
+  .cnts ul li .detail.notice ul li a {
+    display: block;
+  }
+  .cnts ul li .detail.notice ul li a img {
+    height: 250px;
+  }
+  .cnts ul li .detail.notice ul li a p {
+    display: block;
+    margin: 7px 0 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .cnts ul li .detail.notice ul li a span {
+    margin: 0 0 34px 39px;
+  }
+  .cnts ul li .btn_wrap {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .cnts ul li.active .btn_wrap {
+    display: block;
+  }
+  .cnts ul li .btn_wrap button {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 27px;
+    height: 27px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #E60012;
+  }
+  .cnts ul li .btn_wrap a span {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a i.pc {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a i.mobile {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    display: block;
+    font-size: 22px;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 640px) {
+  .cnts {
+    height: 347px;
+    padding: 39px 0 49px 0;
+  }
+  .cnts ul.list>li {
+    float: left;
+    margin: 0 16px 0 0;
+  }
+  .cnts .list li h2 {
+    margin: 0 0 14px 0;
+    font-size: 25px;
+  }
+  .cnts ul li .detail {
+    width: 100%;
+    top: 50px;
+    padding: 0 0 18px 0;
+  }
+  .cnts ul li.active .detail {
+    display: block;
+  }
+  .cnts ul li .detail ul {
+    width: 672px;
+  }
+  .cnts ul li .detail ul li {
+    margin: 0 16px 0 0;
+    width: 208px;
+    border-radius: 30px;
+    box-shadow: 0;
+  }
+  .cnts ul li .detail ul li a {
+    display: block;
+    width: 208px;
+    height: 210px;
+  }
+  .cnts ul li .detail ul li a img {
+    width: 100%;
+    height: 100%;
+  }
+  .cnts ul li .detail ul li a p {
+    display: none;
+  }
+  .cnts ul li .detail ul li a span {
+    display: none;
+  }
+  .cnts ul li .detail.notice ul li a {
+    display: block;
+  }
+  .cnts ul li .detail.notice ul li a img {
+    height: 160px;
+  }
+  .cnts ul li .detail.notice ul li a p {
+    display: block;
+    margin: 7px 0 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .cnts ul li .detail.notice ul li a span {
+    margin: 0 0 34px 39px;
+  }
+  .cnts ul li .btn_wrap {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .cnts ul li.active .btn_wrap {
+    display: block;
+  }
+  .cnts ul li .btn_wrap button {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 27px;
+    height: 27px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #E60012;
+  }
+  .cnts ul li .btn_wrap a span {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a i.pc {
+    display: none;
+  }
+  .cnts ul li .btn_wrap a i.mobile {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    display: block;
+    font-size: 22px;
+    color: #fff;
+  }
+}
+
+
+.link ul li {
+  float: left;
+  width: 50%;
+}
+.link ul li a {
+  display: block;
+  height: 335px;
+  color: #fff;
+}
+.link ul li a h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.link ul li a span {
+  font-size: 20px;
+}
+.link ul li.eatz {
+  background: url(../images/banner1.png) no-repeat center center / cover;
+  text-align: right;
+}
+.link ul li.eatz a h2 {
+  padding: 168px 100px 0 0;
+}
+.link ul li.eatz a span {
+  padding: 0 100px 0 0;
+}
+.link ul li.service {
+  background: url(../images/banner2.png) no-repeat center center / cover;
+}
+.link ul li.service a h2 {
+  padding: 168px 0 0 100px;
+}
+.link ul li.service a span {
+  padding: 0 0 0 100px;
+}
+@media screen and (max-width: 1440px) {
+  .link ul li a {
+    height: 280px;
+  }
+  .link ul li a h2 {
+    font-size: 40px;
+  }
+  .link ul li a span {
+    font-size: 18px;
+  }
+  .link ul li.eatz a h2 {
+    padding: 130px 90px 0 0;
+  }
+  .link ul li.eatz a span {
+    padding: 0 90px 0 0;
+  }
+  .link ul li.service a h2 {
+    padding: 130px 0 0 90px;
+  }
+  .link ul li.service a span {
+    padding: 0 0 0 90px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .link ul li a {
+    height: 250px;
+  }
+  .link ul li a h2 {
+    font-size: 35px;
+  }
+  .link ul li a span {
+    font-size: 16px;
+  }
+  .link ul li.eatz a h2 {
+    padding: 120px 80px 0 0;
+  }
+  .link ul li.eatz a span {
+    padding: 0 80px 0 0;
+  }
+  .link ul li.service a h2 {
+    padding: 120px 0 0 80px;
+  }
+  .link ul li.service a span {
+    padding: 0 0 0 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .link ul li a {
+    height: 190px;
+  }
+  .link ul li a h2 {
+    font-size: 28px;
+  }
+  .link ul li a span {
+    font-size: 16px;
+  }
+  .link ul li.eatz a h2 {
+    padding: 75px 50px 0 0;
+  }
+  .link ul li.eatz a span {
+    padding: 0 50px 0 0;
+  }
+  .link ul li.service a h2 {
+    padding: 75px 0 0 50px;
+  }
+  .link ul li.service a span {
+    padding: 0 0 0 50px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .link ul li a {
+    height: 170px;
+  }
+  .link ul li a h2 {
+    font-size: 23px;
+  }
+  .link ul li a span {
+    font-size: 14px;
+  }
+  .link ul li.eatz a h2 {
+    padding: 67px 30px 0 0;
+  }
+  .link ul li.eatz a span {
+    padding: 0 30px 0 0;
+  }
+  .link ul li.service a h2 {
+    padding: 70px 0 0 30px;
+  }
+  .link ul li.service a span {
+    padding: 0 0 0 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .link {
+    padding: 0;
+  }
+  .link ul li {
+    float: none;
+    width: auto;
+  }
+  .link ul li a {
+    height: 150px;
+  }
+  .link ul li a h2 {
+    font-size: 20px;
+  }
+  .link ul li a span {
+    font-size: 13px;
+  }
+  .link ul li.eatz a h2 {
+    padding: 84px 20px 0 0;
+  }
+  .link ul li.eatz a span {
+    padding: 0 20px 0 0;
+  }
+  .link ul li.service a h2 {
+    padding: 84px 0 0 20px;
+  }
+  .link ul li.service a span {
+    padding: 0 0 0 20px;
+  }
+}
+
+.subsidiary {
+  padding: 54px 0 91px 0;
+}
+.subsidiary .lotte h2 {
+  margin: 0 0 12px 0;
+  font-size: 60px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+.subsidiary .lotte span {
+  font-size: 20px;
+  color: #666;
+}
+.subsidiary .brand ul {
+  display: flex;
+}
+.subsidiary .brand ul li {
+  margin: 0 40px 0 0;
+}
+.subsidiary .brand ul li:last-child {
+  margin-right: 0;
+}
+.subsidiary .brand ul li a {
+  display: block;
+}
+.subsidiary .brand ul li a span {
+  display: block;
+  margin: 52px 0 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid #EDEDED;
+}
+.subsidiary .brand ul li.angel a span {
+  background-image: url(../images/subsi1.svg);
+}
+.subsidiary .brand ul li.donut a span {
+  background-image: url(../images/subsi2.svg);
+}
+.subsidiary .brand ul li.group a span {
+  background-image: url(../images/subsi3.svg);
+}
+.subsidiary .brand ul li.mart a span {
+  background-image: url(../images/subsi4.svg);
+}
+.subsidiary .brand ul li.drink a span {
+  background-image: url(../images/subsi5.svg);
+}
+.subsidiary .brand ul li.super a span {
+  background-image: url(../images/subsi6.svg);
+}
+.subsidiary .brand ul li.depart a span {
+  background-image: url(../images/subsi7.svg);
+}
+.subsidiary .brand ul li a strong {
+  display: block;
+  margin: 21px 0 0 0;
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  .subsidiary {
+    padding: 45px 0 80px 0;
+  }
+  .subsidiary .lotte h2 {
+    margin: 0 0 6px 0;
+    font-size: 50px;
+  }
+  .subsidiary .lotte span {
+    font-size: 18px;
+  }
+  .subsidiary .brand {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 0 0 15px 0;
+  }
+  .subsidiary .brand ul li {
+    margin: 0 35px 0 0;
+  }
+  .subsidiary .brand ul li a span {
+    margin: 45px 0 0 0;
+    width: 150px;
+    height: 150px;
+  }
+  .subsidiary .brand ul li a strong {
+    margin: 10px 0 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .subsidiary {
+    padding: 30px 0 70px 0;
+  }
+  .subsidiary .lotte h2 {
+    margin: 0 0 4px 0;
+    font-size: 45px;
+  }
+  .subsidiary .lotte span {
+    font-size: 16px;
+  }
+  .subsidiary .brand ul li {
+    margin: 0 30px 0 0;
+  }
+  .subsidiary .brand ul li a span {
+    margin: 40px 0 0 0;
+  }
+  .subsidiary .brand ul li a strong {
+    margin: 8px 0 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .subsidiary {
+    padding: 20px 0 60px 0;
+  }
+  .subsidiary .lotte h2 {
+    margin: 0;
+    font-size: 40px;
+  }
+  .subsidiary .lotte span {
+    font-size: 14px;
+  }
+  .subsidiary .brand ul li {
+    margin: 0 25px 0 0;
+  }
+  .subsidiary .brand ul li a span {
+    margin: 40px 0 0 0;
+  }
+  .subsidiary .brand ul li a strong {
+    margin: 8px 0 0 0;
+  }
+}
+@media screen and (max-width: 860px) {
+  .subsidiary {
+    padding: 20px 0 60px 0;
+  }
+  .subsidiary .lotte h2 {
+    font-size: 30px;
+  }
+  .subsidiary .lotte span {
+    font-size: 13px;
+  }
+  .subsidiary .brand ul li {
+    margin: 0 25px 0 0;
+  }
+  .subsidiary .brand ul li a span {
+    margin: 20px 0 0 0;
+  }
+  .subsidiary .brand ul li a strong {
+    margin: 8px 0 0 0;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .subsidiary {
+    display: none;
+  }
+}
+
+
