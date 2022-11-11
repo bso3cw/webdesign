@@ -307,6 +307,89 @@ html, body {
 
   }
 
+  aside.top {
+    position: fixed;
+    right: 42px;
+    bottom: 328px;
+    z-index: 300;
+  }
+  aside.top button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #666;
+    color: #fff;
+  }
+  aside.top button span {
+    display: none;
+  }
+  aside.top button i {
+    margin-top: 5px;
+    font-size: 25px;
+  }
+  @media screen and (max-width:1440px){
+    aside.top {
+      right: 35px;
+      bottom: 328px;
+    }
+    aside.top button {
+      width: 42px;
+      height: 42px;
+    }
+    aside.top button i {
+      font-size: 22px;
+    }
+  }
+  @media screen and (max-width:1200px){
+    aside.top {
+      right: 35px;
+      bottom: 325px;
+    }
+    aside.top button {
+      width: 38px;
+      height: 38px;
+    }
+    aside.top button i {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width:1000px){
+    aside.top {
+      right: 35px;
+      bottom: 316px;
+    }
+    aside.top button {
+      width: 34px;
+      height: 34px;
+    }
+    aside.top button i {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width:860px){
+    aside.top {
+      right: 35px;
+      bottom: 340px;
+    }
+    aside.top button {
+      width: 32px;
+      height: 32px;
+    }
+    aside.top button i {
+      font-size: 17px;
+    }
+  }
+  @media screen and (max-width:640px){
+    aside.top button {
+      display: none;
+    }
+  }
+
+
+
+
+
+
 
   .footer {
     padding: 0 0 55px 0;
@@ -348,7 +431,6 @@ html, body {
     top: 4px;
     right: 8px;
     font-size: 25px;
-  
   }
   .footer .logo {
     padding: 44px 0 52px 0;
@@ -359,7 +441,7 @@ html, body {
   .footer .fnav li {
     position: relative;
     float: left;
-    margin: 0 19px;
+    margin: 0 38px 0 0;
   }
   .footer .fnav li::after {
     position: absolute;
@@ -372,9 +454,6 @@ html, body {
   }
   .footer .fnav li:last-child:after {
     display: none;
-  }
-  .footer .fnav li:first-child {
-    margin-left: 0;
   }
   .footer .fnav li:last-child {
     margin-right: 0;
@@ -407,17 +486,68 @@ html, body {
     background-color: #ccc;
     content: "";
   }
+  @media screen and (max-width:1000px){
+    .footer .family button {
+      width: 160px;
+      height: 35px;
+    }
+    .footer .family span {
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 12px;
+    }
+    .footer .family i {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      font-size: 22px;
+    }
+    .footer .fnav li::after {
+      height: 9px;
+    }
+    .footer .finfo span.border::after {
+      height: 9px;
+    }
+  }
+  @media screen and (max-width:860px){
+    .footer .family button {
+      width: 150px;
+    }
+    .footer .family span {
+      top: 7px;
+    }
+    .footer .family i {
+      top: 7px;
+      font-size: 21px;
+    }
+    .footer .fnav li::after {
+      height: 8px;
+    }
+    .footer .finfo span.border::after {
+      height: 8px;
+    }
+  }
   @media screen and (max-width:640px){
     .footer {
-      padding: 0 0 55px 0;
+      position: relative;
+      padding: 0 0 35px 0;
     }
     .footer .flink {
       float: none;
-      margin: 12px 0 0 0;
+      margin: 0;
+      padding: 10px 0 0 0;
+    }
+    .footer .flink::after {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: calc(100% + 20px);
+      border: 1px solid #999;
+      content: "";
     }
     .footer .sns {
-      float: none;
-      margin: 3px 15px 0 0;
+      margin: 10px 0 0 -5px;
     }
     .footer .sns ul {
       display: flex;
@@ -426,9 +556,13 @@ html, body {
     .footer .sns ul li {
       margin: 0 16px;
     }
+    .footer .sns ul li a img {
+      width: 90%;
+    }
     .footer .family {
       position: relative;
-      float: none;
+      margin: 8px 5px 0 0;
+      float: right;
       border: 1px solid rgba(255, 255, 255, 0.7);
     }
     .footer .family button {
@@ -438,29 +572,29 @@ html, body {
     .footer .family span {
       display: block;
       position: absolute;
-      top: 4px;
-      left: 12px;
+      top: 5px;
+      left: 10px;
     }
     .footer .family i {
       position: absolute;
-      top: 4px;
-      right: 8px;
-      font-size: 25px;
+      top: 5px;
+      right: 6px;
+      font-size: 20px;
     
     }
     .footer .logo {
-      padding: 44px 0 52px 0;
+      padding: 44px 0 0 0;
+      margin: 40px 0 27px 0;
     }
     .footer .fnav {
-      margin: 0 0 20px 0;
+      margin: 0 0 16px 0;
     }
     .footer .fnav li {
-      float: left;
-      margin: 0 15px;
+      margin: 0 30px 0 0;
     }
     .footer .fnav li::after {
       position: absolute;
-      top: 5px;
+      top: 6px;
       right: -16px;
       width: 1px;
       height: 7px;
@@ -468,13 +602,10 @@ html, body {
       content: "";
     }
     .footer .fnav li:nth-child(4):after {
-      display: none;
+      display: block;
     }
     .footer .finfo {
-      margin: 0 0 10px 0;
-    }
-    .footer .finfo span {
-      display: inline-block;
+      margin: 0 0 16px 0;
     }
     .footer .finfo span:first-child {
       margin-left: 0;
@@ -482,17 +613,11 @@ html, body {
     .footer .finfo span:last-child {
       margin-right: 0;
     }
-    .footer .finfo span.border {
+    .footer .finfo span, .footer .finfo span.border {
       position: relative;
-      margin: 0 33px 0 0;
+      margin: 0 25px 0 0;
     }
-    .footer .finfo span.border::after {
-      position: absolute;
-      top: 7px;
-      right: -20px;
-      width: 1px;
-      height: 10px;
-      background-color: #ccc;
-      content: "";
+    .footer .finfo span::after, .footer .finfo span.border::after {
+      display: none;
     }
   }
