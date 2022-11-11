@@ -528,7 +528,7 @@
 }
 @media screen and (max-width: 860px) {
   .burger {
-    padding: 19px 0 132px 0;
+    padding: 19px 0 110px 0;
   }
   .burger h2 {
     float: none;
@@ -558,11 +558,11 @@
     border-radius: 20px 0 20px 0;
   }
   .burger .food ul li:nth-child(1), .burger .food ul li:nth-child(3) {
-    transform: translateY(50%);
+    transform: translateY(25%);
   }
   .burger .food ul li:nth-child(2), .burger .food ul li:nth-child(4) {
     margin-right: 0;
-    transform: translateY(0);
+    transform: translateY(-25%);
   }
   .burger .food ul li a {
     display: block;
