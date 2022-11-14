@@ -55,8 +55,10 @@
   z-index: 25;
 }
 .visual .store a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
-  display: block;
   width: 389px;
   height: 104px;
   text-align: center;
@@ -71,33 +73,24 @@
   color: #1d1d1d;
   border-radius: 0 0 40px 0;
 }
+.visual .store a i {
+  margin-right: 20px;
+}
 .visual .store a.find i {
-  position: absolute;
   display: inline-block;
   font-size: 35px;
   height: 40px;
-  left: 102px;
-  top: 33px;
 }
 .visual .store a.fran i {
-  position: absolute;
   display: inline-block;
   font-size: 40px;
   font-weight: 400;
-  right: 270px;
-  top: 32px;
 }
 .visual .store a span {
   font-size: 30px;
   font-weight: 700;
-}
-.visual .store a.find span {
-  display: inline-block;
-  padding: 28px 0 0 17px;
-}
-.visual .store a.fran span {
-  display: inline-block;
-  padding: 28px 0 0 20px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 1440px) {
@@ -105,7 +98,6 @@
     margin: 0 0 100px 0;
   }
   .visual .banner ul li a {
-    height: auto;
     display: block;
   }
   .visual .banner .btn_wrap {
@@ -131,29 +123,20 @@
   .visual .store a.find i {
     font-size: 30px;
     height: 33px;
-    left: 80px;
-    top: 34px;
   }
   .visual .store a.fran i {
     font-size: 32px;
-    right: 233px;
-    top: 34px;
   }
   .visual .store a span {
     font-size: 25px;
-  }
-  .visual .store a.find span {
-    display: inline-block;
-    padding: 30px 0 0 33px;
-  }
-  .visual .store a.fran span {
-    display: inline-block;
-    padding: 30px 0 0 33px;
   }
 }
 @media screen and (max-width: 1200px) {
   .visual {
     margin: 0 0 70px 0;
+  }
+  .visual .banner ul li a {
+    height: 500px;
   }
   .visual .banner .btn_wrap {
     left: calc(50% - 33px);
@@ -179,22 +162,12 @@
   .visual .store a.find i {
     font-size: 28px;
     height: 30px;
-    left: 50px;
-    top: 22px;
   }
   .visual .store a.fran i {
     font-size: 30px;
-    right: 180px;
-    top: 22px;
   }
   .visual .store a span {
     font-size: 22px;
-  }
-  .visual .store a.find span {
-    padding: 20px 0 0 28px;
-  }
-  .visual .store a.fran span {
-    padding: 20px 0 0 26px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -225,27 +198,21 @@
   .visual .store a.find i {
     font-size: 28px;
     height: 30px;
-    left: 50px;
-    top: 15px;
   }
   .visual .store a.fran i {
     font-size: 30px;
-    right: 150px;
-    top: 14px;
   }
   .visual .store a span {
     font-size: 18px;
-  }
-  .visual .store a.find span {
-    padding: 16px 0 0 30px;
-  }
-  .visual .store a.fran span {
-    padding: 16px 0 0 26px;
   }
 }
 @media screen and (max-width: 860px) {
   .visual {
     margin: 0;
+  }
+  
+  .visual .banner ul li a {
+    height: 300px;
   }
   .visual .banner .btn_wrap {
     left: calc(50% - 39px);
@@ -267,7 +234,11 @@
     display: none;
   }
 }
-
+@media screen and (max-width: 640px) {
+  .visual .banner ul li a {
+    height: 200px;
+  }
+}
 
 .burger {
   position: relative;
