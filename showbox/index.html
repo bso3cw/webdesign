@@ -12,14 +12,13 @@
     <script src="js/common.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon_.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0">
     <title>ShowBox 쇼박스</title>
 </head>
 <body>
     <div id="wrap">
         <header class="header">
-            <div class="logo">
-                <a href="index.html"><img src="images/common/logo_w.svg" alt="showbox 로고"></a>
-            </div>
+            <div class="logo"><a href="index.html">쇼박스 로고</a></div>
             <nav class="gnb">
                 <ul class="menu">
                     <li><a href="#n">About</a></li>
@@ -28,15 +27,21 @@
                     <li><a href="#n">Contact Us</a></li>
                     <li><a href="#n">IR</a></li>
                 </ul>
-                <div class="search">
-                    <form>
-                        <fieldset>
-                            <legend>검색</legend>
-                            <label for="keyword">검색어</label>
-                            <input type="text" id="keyword" placeholder="영화명 검색" autocomplete="off"></input>
-                            <input type="submit" value="검색" class="btn">
-                        </fieldset>
-                    </form>
+                <div class="icon">
+                    <div class="search">
+                        <form>
+                            <fieldset>
+                                <legend>검색</legend>
+                                <label for="keyword">검색어</label>
+                                <input type="text" id="keyword" placeholder="영화명 검색" autocomplete="off"></input>
+                                <input type="submit" value="검색" class="btn">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <button class="m_menu">
+                        <span>메뉴</span>
+                        <i class="material-symbols-outlined">menu</i>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -56,6 +61,40 @@
                 </video>
                 <div class="bg"></div>
             </section>
+            <div class="wrapper">
+                <section class="section biz biz1">
+                    <img src="images/main/biz1.png" alt="영화 촬영 스튜디오 사진">
+                    <div class="color"></div>
+                    <div class="cnt">
+                        <h2>Production & Investment</h2>
+                        <span>주요 제작사 및 투자사와의 전략적 제휴를 통한 영화 투자를 계획하고 제작관리를 실행합니다.</span>
+                    </div>
+                </section>
+                <section class="section biz biz2">
+                    <img src="images/main/biz2.png" alt="극장 의자에 앉아 영화를 관람하는 관객들 사진">
+                    <div class="color"></div>
+                    <div class="cnt">
+                        <h2>Film Distribution</h2>
+                        <span>전국 2,937여개의 스크린에 영화를 공급하며, IPTV/디지털케이블, 온라인/모바일 OTT 등 뉴미디어에 디지털 VOD를 제공하고 해외 영화제 및 영화마켓 등에서 해외 홍보/마케팅/세일즈 활동을 통하여 국가별 해외배급을 진행합니다.</span>
+                    </div>
+                </section>
+                <section class="section biz biz3">
+                    <img src="images/main/biz3.png" alt="여러 고층 건물들 외벽에 붙어 있는 영화 포스터 사진">
+                    <div class="color"></div>
+                    <div class="cnt">
+                        <h2>Advertisement/Marketing</h2>
+                        <span>영화의 인지/선호도를 높이기 위한 홍보/마케팅 활동을 진행합니다.</span>
+                    </div>
+                </section>
+                <section class="section biz biz4">
+                    <img src="images/main/biz4.png" alt="영화관 의자에 앉아 영화 상영을 기다리는 관객들의 뒷모습 사진">
+                    <div class="color"></div>
+                    <div class="cnt">
+                        <h2>Overseas Theater Business</h2>
+                        <span>중국 북경에 상영관 2개점, 심양에 상영관 1개점을 운영하고 있습니다.</span>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </body>

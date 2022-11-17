@@ -3,6 +3,49 @@
 
 
 
+body #fp-nav ul li:first-child {
+    display: none;
+}
+body #fp-nav ul li {
+    padding: 0 0 66px 0;
+}
+body #fp-nav ul li a span {
+    display: none;
+    background-color: #3d3d3d;
+}
+body #fp-nav ul li a.active span {
+    background-image: url(../images/main/paging.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 5px;
+    height: 11px;
+    background-color: transparent;
+}
+body #fp-nav ul li .fp-tooltip {
+    margin: 0 0 32px 0;
+    top: -17px;
+    font-size: 15px;
+    color: #3d3d3d;
+    overflow: visible;
+    opacity: 1;
+    font-family: 'Red Hat Display', "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+}
+body #fp-nav ul li:hover .fp-tooltip {
+    color: #3d3d3d;
+}
+body #fp-nav ul li .fp-tooltip.fp-left {
+    width: auto;
+    left: 40px;
+}
+body #fp-nav.fp-show-active a.active + .fp-tooltip {
+    color: #ccc;   
+}
+body #fp-nav ul li:hover a.active span {
+    width: 5px;
+    height: 11px;
+}
+
 
 
 .visual {
@@ -11,6 +54,7 @@
 }
 
 .visual .inner h2 {
+    margin: 0 0 35px 0;
     position: absolute;
     left: 67px;
     bottom: 143px;
@@ -52,4 +96,167 @@
     bottom: 0;
     z-index: 11;
     background-color: rgba(0,0,0,0.2);
+}
+@media screen and (max-width:1440px){
+    .visual {
+        width: 100%;
+        height: 100%;
+    }
+    .visual .inner h2 {
+        margin: 0 0 30px 0;
+        position: absolute;
+        left: 67px;
+        bottom: 140px;
+        z-index: 12;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #fff;
+    }
+    .visual .inner ul {
+        position: absolute;
+        left: 69px;
+        bottom: 84px;
+        z-index: 12;
+    }
+    .visual .inner ul li {
+        float: left;
+        margin: auto 24px;
+    }
+}
+@media screen and (max-width:1200px){
+    .visual .inner h2 {
+        margin: 0 0 20px 0;
+        left: 67px;
+        bottom: 140px;
+        font-size: 46px;
+    }
+    .visual .inner ul {
+        position: absolute;
+        left: 69px;
+        bottom: 80px;
+        z-index: 12;
+    }
+    .visual .inner ul li {
+        float: left;
+        margin: auto 24px;
+    }
+}
+@media screen and (max-width:1000px){
+    .visual .inner h2 {
+        margin: 0 0 18px 0;
+        left: 67px;
+        bottom: 130px;
+        font-size: 40px;
+    }
+    .visual .inner ul {
+        position: absolute;
+        left: 69px;
+        bottom: 80px;
+        z-index: 12;
+    }
+    .visual .inner ul li {
+        float: left;
+        margin: auto 24px;
+    }
+    .visual .inner ul li a img {
+        width: 90%;
+    }
+}
+@media screen and (max-width:860px){
+    .visual .inner h2 {
+        margin: 0 0 18px 0;
+        left: 67px;
+        bottom: 130px;
+        font-size: 30px;
+    }
+    .visual .inner ul {
+        position: absolute;
+        left: 69px;
+        bottom: 80px;
+        z-index: 12;
+    }
+    .visual .inner ul li {
+        float: left;
+        margin: auto 24px;
+    }
+    .visual .inner ul li a img {
+        width: 90%;
+    }
+}
+@media screen and (max-width:640px){
+
+    .fp-scrollable.fp-responsive .fp-is-overflow.fp-section, .fp-scrollable .fp-section {
+        height: 244px !important;
+        min-height: auto
+    }
+
+
+
+    .visual {
+        width: auto;
+    }
+    
+    .visual .inner h2 {
+        margin: 0 0 14px 0;
+        position: absolute;
+        left: 20px;
+        bottom: 48px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .visual .inner ul {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        z-index: 12;
+    }
+    .visual .inner ul li {
+        float: left;
+        margin: auto 14px;
+    }
+    .visual .inner ul li a img {
+        width: 80%;
+    }
+    
+}
+
+.biz {
+    position: relative;
+    height: 1000px;
+}
+
+.biz .image {
+    position: relative;
+}
+.biz img {
+    position: absolute;
+    top: 65px;
+    left: calc(50% + 10px);
+    width: 824px;
+    height: 871px;
+    object-fit: cover;
+}
+.biz .cnt {
+    position: absolute;
+    left: 0;
+    top: 45%;
+}
+.biz .cnt h2 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #EE730B;
+}
+.biz2 .cnt span {
+    display: block;
+    width: 650px;
+    line-height: 1.3;
+}
+.biz .color {
+    position: absolute;
+    top: 165px;
+    right: -240px;
+    background-color: #EE730B;
+    width: 106px;
+    height: 671px;
 }
