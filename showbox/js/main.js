@@ -13,21 +13,76 @@ $(document).ready(function(){
     verticalCentered: true, /* 컨텐츠 요소 위아래 가운데 */
 
     afterLoad: function(origin, destination, direction, trigger){
-        if((destination.index == 1)||(destination.index == 2)||(destination.index == 3)||(destination.index == 4)){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
-            $('.header').addClass('fixed')
-        }else{
-            $('.header').removeClass('fixed')
-        }
+        
         if(destination.index == 0){
             $('#fp-nav').hide()
-        }else{
-            $('#fp-nav').show()
         }
     },
+    onLeave: function(origin, destination, direction, trigger){
+		
+            console.log(destination.index)
+            if((destination.index == 1)||(destination.index == 2)||(destination.index == 3)||(destination.index == 4)||(destination.index == 5)||(destination.index == 6)||(destination.index == 7)||(destination.index == 8)){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
+                $('.header').addClass('fixed')
+            }else{
+                $('.header').removeClass('fixed')
+            }
+            if((destination.index == 0)||(destination.index == 5)||(destination.index == 6)||(destination.index == 7)||(destination.index == 8)){
+                $('#fp-nav').hide()
+            }else{
+                $('#fp-nav').show()
+            }
 
-    responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
+            //구역 2를 떠난 후
+            // if(destination.index == 1 && direction =='down'){
+            // 	alert("Going to section 3!");
+            // }
+
+            // else if(origin.index == 1 && direction == 'up'){
+            // 	alert("Going to section 1!");
+            // }
+        },
+
+        responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
+        
+    });
+
+    const swiper = new Swiper('.history .year', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+	spaceBetween: 80, /* li와 li사이 - 제일 작은 여백 */
+	breakpoints: {
+        320: {  
+            slidesPerView: "auto",
+			spaceBetween: 20, 
+		},
+		640: {  /* 640px 이상이 되면 적용 */
+            slidesPerView: "auto",  
+			spaceBetween: 40, 
+		},
+		1024: {  /* 1024px 이상이 되면 적용 */
+            slidesPerView: "auto",
+			spaceBetween: 40,
+		},
+        1440: {  /* 1024px 이상이 되면 적용 */
+            slidesPerView: "auto",
+			spaceBetween: 80,
+		},
+	},
+	navigation: {
+		nextEl: '.history .tit .arrow button.next',
+		prevEl: '.history .tit .arrow button.prev',
+	},
+	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+		el: '.swiper-pagination', /* 해당 요소의 class명 */
+		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+		type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+	},
 });
 
+
+
+
+
+ 
 
 
 });

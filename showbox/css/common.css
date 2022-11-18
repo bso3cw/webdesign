@@ -372,4 +372,7 @@ html, body {
     .header .m_menu span {
         display: none;
     }
+    .header.fixed .search {
+        border-bottom: none;
+    }
 }

@@ -2,11 +2,19 @@
 @import url(common.css);
 
 
-
+.fp-is-overflow > .fp-overflow {
+    overflow-y: inherit;
+}
+@media screen and (max-width:640px){
+    .fp-is-overflow > .fp-overflow {
+        overflow-y: inherit;
+    }
+}
 body #fp-nav ul li:first-child {
     display: none;
 }
 body #fp-nav ul li {
+    top: 60px;
     padding: 0 0 66px 0;
 }
 body #fp-nav ul li a span {
@@ -24,7 +32,7 @@ body #fp-nav ul li a.active span {
 }
 body #fp-nav ul li .fp-tooltip {
     margin: 0 0 32px 0;
-    top: -17px;
+    top: -23px;
     font-size: 15px;
     color: #3d3d3d;
     overflow: visible;
@@ -36,7 +44,7 @@ body #fp-nav ul li:hover .fp-tooltip {
 }
 body #fp-nav ul li .fp-tooltip.fp-left {
     width: auto;
-    left: 40px;
+    left: 23px;
 }
 body #fp-nav.fp-show-active a.active + .fp-tooltip {
     color: #ccc;   
@@ -45,7 +53,87 @@ body #fp-nav ul li:hover a.active span {
     width: 5px;
     height: 11px;
 }
-
+strong {
+    display: block;
+    margin: 0 0 4px 0;
+}
+@media screen and (max-width:1000px){
+    body #fp-nav ul li:first-child {
+        display: none;
+    }
+    body #fp-nav ul li {
+        padding: 0 0 53px 0;
+    }
+    body #fp-nav ul li a span {
+        display: none;
+        background-color: #3d3d3d;
+    }
+    body #fp-nav ul li a.active span {
+        background-image: url(../images/main/paging.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        width: 5px;
+        height: 11px;
+        background-color: transparent;
+    }
+    body #fp-nav ul li .fp-tooltip {
+        margin: 0 0 15px 0;
+        top: -23px;
+        font-size: 14px;
+        color: #3d3d3d;
+        overflow: visible;
+    }
+    body #fp-nav ul li .fp-tooltip.fp-left {
+        width: auto;
+        left: 20px;
+    }
+    body #fp-nav ul li:hover a.active span {
+        width: 5px;
+        height: 11px;
+    }
+}
+@media screen and (max-width:860px){
+    body #fp-nav ul li:first-child {
+        display: none;
+    }
+    body #fp-nav ul li {
+        padding: 0 0 50px 0;
+    }
+    body #fp-nav ul li a span {
+        display: none;
+        background-color: #3d3d3d;
+    }
+    body #fp-nav ul li a.active span {
+        background-image: url(../images/main/paging.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        width: 5px;
+        height: 11px;
+        background-color: transparent;
+    }
+    body #fp-nav ul li .fp-tooltip {
+        margin: 0 0 15px 0;
+        top: -23px;
+        font-size: 13px;
+        color: #3d3d3d;
+        overflow: visible;
+    }
+    body #fp-nav ul li .fp-tooltip.fp-left {
+        width: auto;
+        left: 20px;
+    }
+    body #fp-nav ul li:hover a.active span {
+        width: 5px;
+        height: 11px;
+    }
+}
+@media screen and (max-width:640px){
+    body #fp-nav ul li {
+        display: none;
+    }
+}
 
 
 .visual {
@@ -225,27 +313,28 @@ body #fp-nav ul li:hover a.active span {
     position: relative;
     height: 1000px;
 }
-
-.biz .image {
-    position: relative;
-}
-.biz img {
+.biz .pic {
     position: absolute;
     top: 65px;
     left: calc(50% + 10px);
+    z-index: 20;
+}
+.biz .pic img {
     width: 824px;
     height: 871px;
     object-fit: cover;
 }
 .biz .cnt {
     position: absolute;
-    left: 0;
-    top: 45%;
+    left: 13.5%;
+    top: 44%;
+    z-index: 30;
 }
 .biz .cnt h2 {
     font-size: 70px;
     font-weight: 700;
     color: #EE730B;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 .biz2 .cnt span {
     display: block;
@@ -255,8 +344,367 @@ body #fp-nav ul li:hover a.active span {
 .biz .color {
     position: absolute;
     top: 165px;
-    right: -240px;
+    right: 0;
     background-color: #EE730B;
-    width: 106px;
+    width: 126px;
     height: 671px;
+    z-index: 1;
+}
+@media screen and (max-width:1600px){
+    .biz {
+        position: relative;
+        height: 1000px;
+    }
+    .biz .pic {
+        position: absolute;
+        top: 105px;
+        left: calc(50% + 10px);
+        z-index: 20;
+    }
+    .biz .pic img {
+        width: 750px;
+        height: 805px;
+        object-fit: cover;
+    }
+    .biz .cnt {
+        left: 17%;
+        top: 44%;
+    }
+    .biz .cnt h2 {
+        font-size: 65px;
+        font-weight: 700;
+        color: #EE730B;
+    }
+    .biz .cnt span {
+        display: block;
+        width: 500px;
+    }
+    .biz2 .cnt span {
+        display: block;
+        width: 500px;
+        line-height: 1.4;
+    }
+    .biz .color {
+        position: absolute;
+        top: 165px;
+        right: 0;
+        background-color: #EE730B;
+        width: 126px;
+        height: 671px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:1440px){
+    .biz {
+        position: relative;
+        height: 1000px;
+    }
+    .biz .pic {
+        position: absolute;
+        top: 120px;
+        left: calc(50% + 10px);
+        z-index: 20;
+    }
+    .biz .pic img {
+        width: 700px;
+        height: 750px;
+        object-fit: cover;
+    }
+    .biz .cnt {
+        left: 21%;
+        top: 44%;
+    }
+    .biz .cnt h2 {
+        font-size: 55px;
+    }
+    .biz .cnt span {
+        display: block;
+        width: 350px;
+    }
+    .biz2 .cnt span {
+        display: block;
+        width: 380px;
+        line-height: 1.4;
+    }
+    .biz .color {
+        position: absolute;
+        top: 165px;
+        right: 0;
+        background-color: #EE730B;
+        width: 126px;
+        height: 671px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:1200px){
+    .biz {
+        position: relative;
+        height: 1000px;
+    }
+    .biz .pic {
+        position: absolute;
+        top: 160px;
+        left: calc(50% + 10px);
+        z-index: 20;
+    }
+    .biz .pic img {
+        width: 580px;
+        height: 650px;
+        object-fit: cover;
+    }
+    .biz .cnt {
+        left: 25%;
+        top: 44%;
+    }
+    .biz .cnt h2 {
+        font-size: 45px;
+    }
+    .biz .cnt span {
+        display: block;
+        width: 250px;
+    }
+    .biz2 .cnt span {
+        display: block;
+        width: 280px;
+        line-height: 1.4;
+    }
+    .biz .color {
+        position: absolute;
+        top: 220px;
+        right: 0;
+        background-color: #EE730B;
+        width: 80px;
+        height: 500px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:1000px){
+    .biz .pic {
+        position: absolute;
+        top: 185px;
+        left: calc(50% + 10px);
+        z-index: 20;
+    }
+    .biz .pic img {
+        width: 550px;
+        height: 600px;
+        object-fit: cover;
+    }
+    .biz .cnt {
+        left: 29%;
+        top: 44%;
+    }
+    .biz .cnt h2 {
+        font-size: 40px;
+    }
+    .biz .cnt span {
+        display: block;
+        width: 150px;
+    }
+    .biz2 .cnt span {
+        display: block;
+        width: 200px;
+        line-height: 1.4;
+    }
+    .biz .color {
+        position: absolute;
+        top: 250px;
+        right: 0;
+        background-color: #EE730B;
+        width: 80px;
+        height: 350px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:640px){
+    .biz {
+        position: relative;
+        height: auto;
+    }
+    .biz1 {
+        margin: 20px 0 0 0;
+    }
+    .biz .pic {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 134px;
+    }
+    .biz .pic img {
+        width: 100%;
+        height: 100%;
+    }
+    .biz .cnt {
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: center;
+    }
+    .biz .cnt h2 {
+        font-size: 20px;
+    }
+    .biz2 .cnt span {
+        width: auto;
+        height: auto;
+        line-height: 1.5;
+    }
+    .biz .cnt span {
+        display: block;
+        width: auto;
+        line-height: 1.5;
+        text-align: left;
+    }
+    .biz .color {
+        display: none;
+    }
+}
+
+
+.history {
+    margin: 150px 0 0 0;
+    height: 1000px;
+}
+.history .tit h2 {
+    float: left;
+    margin: 0 0 0 107px;
+    font-size: 70px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.history .tit .arrow {
+    float: right;
+}
+.history .tit .arrow button.next {
+    margin: 0 67px 0 15px;
+}
+.history .tit .arrow button:hover i {
+    color: #1d1d1d;
+}
+.history .tit .arrow button span {
+    display: none;
+}
+.history .tit .arrow button i {
+    width: 90px;
+    height: 90px;
+    font-size: 80px;
+    color: #ccc;
+}
+.history .year {
+    margin: 139px 0 0 107px;
+}
+.history .year .order {
+    color: #999;
+}
+.history .year .order h3 {
+    position: relative;
+    margin: 0 0 71px 0;
+    font-size: 60px;
+    font-weight: 700;
+}
+.history .year .order h3::after {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    width: 14px;
+    height: 14px;
+    background-color: #EE730B;
+    border-radius: 50%;
+    content: "";
+    z-index: 30;
+}
+.history .year .order ul {
+    font-weight: 700;
+}
+.history .year .order.swiper-slide-active {
+    color: #1d1d1d;
+}
+.history .year > ul {
+    position: relative;
+}
+.history .year > ul::after {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 450%;
+    height: 1px;
+    background-color: #ccc;
+    content: "";
+}
+.history .year > ul > li {
+    display: inline-block;
+    width: auto;
+}
+
+@media screen and (max-width:640px){
+    .fp-section.history {
+        margin: 20px 0 0 0;
+    }
+    .history .tit h2 {
+        float: left;
+        margin: 0 0 31px 20px;
+        font-size: 25px;
+    }
+    .history .tit .arrow {
+        float: right;
+    }
+    .history .tit .arrow button.next {
+        margin: 0 20px 0 10px;
+    }
+    .history .tit .arrow button:hover i {
+        color: #1d1d1d;
+    }
+    .history .tit .arrow button span {
+        display: none;
+    }
+    .history .tit .arrow button i {
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+    }
+    .history .year {
+        margin: 0 0 0 20px;
+    }
+    .history .year .order {
+        color: #999;
+    }
+    .history .year .order h3 {
+        position: relative;
+        margin: 0 0 41px 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .history .year .order h3::after {
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+        width: 8px;
+        height: 8px;
+        z-index: 30;
+    }
+    .history .year .order ul {
+        font-weight: 700;
+    }
+    .history .year .order.swiper-slide-active {
+        color: #1d1d1d;
+    }
+    .history .year > ul {
+        position: relative;
+    }
+    .history .year > ul::after {
+        position: absolute;
+        top: 40px;
+        left: 4px;
+        width: 1200%;
+    }
+    .history .year > ul > li {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+
+.lineup {
+    height: 1000px;
+    background-color: rgba(251,186,0,0.05);
 }
