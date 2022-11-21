@@ -376,3 +376,32 @@ html, body {
         border-bottom: none;
     }
 }
+
+
+.footer {
+    position: relative;
+    background-color: #1d1d1d;
+    color: rgba(255,255,255,0.7);
+}
+.footer .top {
+    position: absolute;
+    right: 21px;
+    top: 29px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #EE730B;
+    color: #fff;
+}
+.footer .top span {
+    display: none;
+}
+.footer .top i {
+    margin: 10px 0 0 0;
+}
+.footer .fnav .main_f li {
+    float: left;
+}
+.footer .fnav .sub_f li {
+    float: left;
+}

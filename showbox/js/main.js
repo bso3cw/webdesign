@@ -62,7 +62,7 @@ $(document).ready(function(){
             slidesPerView: "auto",
 			spaceBetween: 40,
 		},
-        1440: {  /* 1024px 이상이 되면 적용 */
+        1440: { 
             slidesPerView: "auto",
 			spaceBetween: 80,
 		},
@@ -79,6 +79,35 @@ $(document).ready(function(){
 });
 
 
+
+const swiper_sns = new Swiper(".sns .event", {
+    slidesPerView: "auto",
+    spaceBetween: 70,
+    centeredSlides: true,
+    loop: true, 
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        320: {  
+            slidesPerView: "auto",
+            spaceBetween: 39, 
+        },
+        640: {  
+            slidesPerView: "auto",
+            spaceBetween: 60, 
+        },
+        1024: {  
+            slidesPerView: "auto",
+            spaceBetween: 65, 
+        },
+        1440: {  
+            slidesPerView: "auto",
+            spaceBetween: 70, 
+        },
+    },
+});
 
 
 
