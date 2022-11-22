@@ -964,13 +964,13 @@ strong {
     .lineup .poster .flow_l {
         margin: 0 0 10px 0;
         animation-name: flow_l;
-        animation-duration: 30s;
+        animation-duration: 20s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
     .lineup .poster .flow_r {
         animation-name: flow_r;
-        animation-duration: 30s;
+        animation-duration: 20s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
