@@ -19,7 +19,7 @@ html, body {
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1400px;
     padding: 0 20px;
     margin: 0 auto;
     /* 1400px 이하부터 320px까지 모든 사이즈 반응형
@@ -378,30 +378,484 @@ html, body {
 }
 
 
-.footer {
-    position: relative;
-    background-color: #1d1d1d;
-    color: rgba(255,255,255,0.7);
+aside.top {
+    position: fixed;
+    right: 29px;
+    bottom: 40px;
+    z-index: 300;
 }
-.footer .top {
-    position: absolute;
-    right: 21px;
-    top: 29px;
+aside.top a {
+    display: block;
     width: 43px;
     height: 43px;
     border-radius: 50%;
     background-color: #EE730B;
     color: #fff;
 }
-.footer .top span {
+aside.top a span {
     display: none;
 }
-.footer .top i {
-    margin: 10px 0 0 0;
+aside.top a i {
+    margin: 10px 0 0 9px;
 }
-.footer .fnav .main_f li {
+@media screen and (max-width:1000px){
+    aside.top {
+        right: 29px;
+        bottom: 40px;
+    }
+    aside.top a {
+        width: 40px;
+        height: 40px;
+    }
+    aside.top a i {
+        font-size: 25px;
+        margin: 8px 0 0 8px;
+    }
+}
+@media screen and (max-width:860px){
+    aside.top {
+        right: 29px;
+        bottom: 40px;
+    }
+    aside.top a {
+        width: 35px;
+        height: 35px;
+    }
+    aside.top a i {
+        font-size: 20px;
+        margin: 8px 0 0 7px;
+    }
+}
+@media screen and (max-width:640px){
+    aside.top {
+        display: none;
+    }
+}
+
+
+
+.footer {
+    background-color: #1d1d1d;
+    color: rgba(255,255,255,0.7);
+}
+.footer .ftop {
+    width: 100%;
     float: left;
+}
+.footer .fbottom {
+    padding: 0 0 0 260px;
+    margin: 60px 0 56px 0;
+    width: 100%;
+    float: left;
+}
+.footer .fnav {
+    position: relative;
+    margin: 59px 0 0 0;
+}
+.footer .fnav::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    background-color: #666;
+    content: "";
+}
+.footer .fnav i {
+    display: none;
+}
+.footer .fnav ul li a {
+    margin: 0 120px 61px 0;
+    display: block;
+}
+.footer .fnav ul li:first-child {
+    margin-left: 260px;
+}
+.footer .fnav .main_f > li {
+    float: left;
+    font-size: 19px;
 }
 .footer .fnav .sub_f li {
+    font-size: 17px;
+    line-height: 45px;
+}
+.footer .fnav .sub_f li:first-child {
+    margin: 41px 0 0 0;
+}
+.footer .flogo {
+    display: inline-block;
+    margin: 0 0 46px 0;
+}
+.footer .right {
+    float: right;
+    margin: 0 260px 0 0;
+}
+.footer .right .f_sns {
+    margin: 0 0 43px 0;
+}
+.footer .f_sns ul {
+    display: flex;
+    align-items: center;
+}
+.footer .f_sns ul li {
+    margin: 0 14px;
     float: left;
+}
+.footer .f_sns ul li:last-child {
+    margin-right: 0;
+}
+.footer .family {
+    float: right;
+}
+.footer .family .site {
+    display: flex;
+}
+.footer .family .site span {
+    margin: 0 15px 0 0;
+}
+.footer .finfo {
+    margin: 0 0 14px 0;
+}
+.footer .finfo ul li {
+    margin: 0 30px 0 0;
+    float: left;
+}
+.footer .finfo ul li a {
+    display: block;
+}
+.footer .finfo ul li:last-child {
+    margin-right: 0;
+    font-weight: 700;
+}
+.footer .address {
+    margin: 0 0 3px 0;
+}
+
+@media screen and (max-width:1440px){
+    .footer .fbottom {
+        padding: 0 0 0 260px;
+        margin: 60px 0 56px 0;
+    }
+    .footer .fnav {
+        position: relative;
+        margin: 59px 0 0 0;
+    }
+    .footer .fnav::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid #666;
+        content: "";
+    }
+    .footer .fnav ul li a {
+        margin: 0 100px 61px 0;
+        display: block;
+    }
+    .footer .fnav ul li:first-child {
+        margin-left: 260px;
+    }
+    .footer .fnav .main_f > li {
+        font-size: 18px;
+    }
+    .footer .fnav .sub_f li {
+        font-size: 16px;
+        line-height: 45px;
+    }
+    .footer .fnav .sub_f li:first-child {
+        margin: 41px 0 0 0;
+    }
+    .footer .flogo {
+        display: inline-block;
+        margin: 0 0 46px 0;
+    }
+    .footer .right {
+        float: right;
+        margin: 0 260px 0 0;
+    }
+    .footer .right .f_sns {
+        margin: 0 0 43px 0;
+    }
+    .footer .f_sns ul li {
+        margin: 0 14px;
+        float: left;
+    }
+    .footer .f_sns ul li:last-child {
+        margin-right: 0;
+    }
+    .footer .family {
+        font-size: 15px;
+        float: right;
+    }
+    .footer .family .site span {
+        margin: 0 15px 0 0;
+    }
+    .footer .finfo {
+        font-size: 15px;
+        margin: 0 0 14px 0;
+    }
+    .footer .finfo ul li {
+        margin: 0 30px 0 0;
+        float: left;
+    }
+    .footer .address {
+        font-size: 15px;
+        margin: 0 0 3px 0;
+    }
+}
+@media screen and (max-width:1200px){
+    .footer .fbottom {
+        padding: 0 0 0 140px;
+        margin: 60px 0 56px 0;
+    }
+    .footer .fnav {
+        position: relative;
+        margin: 59px 0 0 0;
+    }
+    .footer .fnav::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid #666;
+        content: "";
+    }
+    .footer .fnav i {
+        display: none;
+    }
+    .footer .fnav ul li a {
+        margin: 0 90px 61px 0;
+        display: block;
+    }
+    .footer .fnav ul li:first-child {
+        margin-left: 140px;
+    }
+    .footer .fnav .main_f > li {
+        float: left;
+        font-size: 17px;
+    }
+    .footer .fnav .sub_f li {
+        font-size: 15px;
+        line-height: 45px;
+    }
+    .footer .fnav .sub_f li:first-child {
+        margin: 41px 0 0 0;
+    }
+    .footer .flogo {
+        display: inline-block;
+        margin: 0 0 46px 0;
+    }
+    .footer .right {
+        float: right;
+        margin: 0 260px 0 0;
+    }
+    .footer .right .f_sns {
+        margin: 0 0 43px 0;
+    }
+    .footer .f_sns ul li {
+        margin: 0 14px;
+        float: left;
+    }
+    .footer .f_sns ul li:last-child {
+        margin-right: 0;
+    }
+    .footer .family {
+        font-size: 15px;
+        float: right;
+    }
+    .footer .family .site {
+        display: flex;
+    }
+    .footer .family .site span {
+        margin: 0 15px 0 0;
+    }
+    .footer .finfo {
+        font-size: 15px;
+        margin: 0 0 14px 0;
+    }
+    .footer .finfo ul li {
+        margin: 0 30px 0 0;
+        float: left;
+    }
+}
+@media screen and (max-width:1000px){
+    .footer .fbottom {
+        padding: 0 0 0 60px;
+        margin: 60px 0 56px 0;
+    }
+    .footer .fnav {
+        position: relative;
+        margin: 59px 0 0 0;
+    }
+    .footer .fnav::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid #666;
+        content: "";
+    }
+    .footer .fnav i {
+        display: none;
+    }
+    .footer .fnav ul li a {
+        margin: 0 90px 61px 0;
+        display: block;
+    }
+    .footer .fnav ul li:first-child {
+        margin-left: 60px;
+    }
+    .footer .fnav .main_f > li {
+        float: left;
+        font-size: 17px;
+    }
+    .footer .fnav .sub_f li {
+        font-size: 15px;
+        line-height: 45px;
+    }
+    .footer .fnav .sub_f li:first-child {
+        margin: 41px 0 0 0;
+    }
+    .footer .flogo {
+        display: inline-block;
+        margin: 0 0 46px 0;
+    }
+    .footer .right {
+        float: right;
+        margin: 0 260px 0 0;
+    }
+    .footer .right .f_sns {
+        margin: 0 0 43px 0;
+    }
+    .footer .f_sns ul li {
+        margin: 0 14px;
+        float: left;
+    }
+    .footer .family {
+        font-size: 15px;
+        float: right;
+    }
+    .footer .family .site span {
+        margin: 0 15px 0 0;
+    }
+    .footer .finfo {
+        font-size: 15px;
+        margin: 0 0 14px 0;
+    }
+    .footer .finfo ul li {
+        margin: 0 30px 0 0;
+        float: left;
+    }
+}
+@media screen and (max-width:860px){
+    .footer {
+        padding: 53px 0 32px 0;
+    }
+    .footer .ftop {
+        margin: 0 0 0 20px;
+        width: auto;
+        float: none;
+    }
+    .footer .fbottom {
+        padding: 0;
+        margin: 0 0 0 20px;
+        width: auto;
+        float: none;
+    }
+    .footer .fnav {
+        position: relative;
+        margin: 0;
+    }
+    .footer .fnav::after {
+        display: none;
+    }
+    .footer .fnav i {
+        margin: 0 30px 0 0;
+        float: right;
+        display: block;
+        width: 15px;
+    }
+    .footer .fnav ul li {
+        margin: 0 0 27px 0;
+    }
+    .footer .fnav ul li:first-child {
+        margin-left: 0;
+    }
+    .footer .fnav ul li:last-child {
+        margin-bottom: 0;
+    }
+    .footer .fnav ul li a {
+        margin: 0;
+        display: block;
+    }
+    .footer .fnav .main_f > li {
+        position: relative;
+        float: none;
+        font-size: 15px;
+    }
+    .footer .fnav .main_f > li::after {
+        position: absolute;
+        left: 0;
+        bottom: -11px;
+        width: calc(100% - 20px);
+        height: 0.5px;
+        background-color: rgba(255,255,255,0.7);
+        content: "";
+    }
+    .footer .fnav .sub_f li {
+        display: none;
+    }
+    .footer .flogo {
+        display: none;
+    }
+    .footer .right {
+        float: none;
+        margin: 0;
+    }
+    .footer .right .f_sns {
+        margin: 40px 0 24px 0;
+    }
+    .footer .f_sns ul li {
+        margin: 0 14px;
+        float: left;
+    }
+    .footer .f_sns ul li:first-child {
+        margin-left: 0;
+    }
+    .footer .f_sns ul li a img {
+        width: 75%;
+    }
+    .footer .family {
+        float: none;
+    }
+    .footer .family .site {
+        display: flex;
+        align-items: center;
+    }
+    .footer .family .site span {
+        margin: 0 10px 0 0;
+        font-size: 13px;
+    }
+    .footer .family .site i {
+        font-size: 15px;
+    }
+    .footer .finfo {
+        margin: 41px 0 14px 0;
+        font-size: 13px;
+    }
+    .footer .finfo ul li {
+        margin: 0 30px 0 0;
+        float: left;
+    }
+    .footer .finfo ul li a {
+        display: block;
+    }
+    .footer .finfo ul li:last-child {
+        margin-right: 0;
+        font-weight: 700;
+    }
+    .footer .address {
+        margin: 0 0 3px 0;
+        font-size: 13px;
+    }
 }

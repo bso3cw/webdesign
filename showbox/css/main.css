@@ -275,8 +275,8 @@ strong {
 @media screen and (max-width:640px){
 
     .fp-scrollable.fp-responsive .fp-is-overflow.fp-section, .fp-scrollable .fp-section {
-        height: 244px !important;
-        min-height: auto
+        height: auto !important;
+        min-height: 244px
     }
 
 
@@ -290,7 +290,7 @@ strong {
         position: absolute;
         left: 20px;
         bottom: 48px;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 1.3;
     }
     .visual .inner ul {
@@ -522,7 +522,7 @@ strong {
         height: auto;
     }
     .biz4 {
-        margin: 0 0 50px 0;
+        padding: 0 0 50px 0;
     }
     .biz1 {
         margin: 20px 0 0 0;
@@ -530,12 +530,12 @@ strong {
     .biz .pic {
         position: relative;
         top: auto;
-        left: auto;
+        left: 10%;
         width: 100%;
         height: 134px;
     }
     .biz .pic img {
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
     .biz .cnt {
@@ -545,6 +545,7 @@ strong {
         text-align: center;
     }
     .biz .cnt h2 {
+        margin: 11px 0 5px 0;
         font-size: 20px;
     }
     .biz2 .cnt span {
@@ -553,8 +554,10 @@ strong {
         line-height: 1.5;
     }
     .biz .cnt span {
+        position: relative;
+        left: 10%;
         display: block;
-        width: auto;
+        width: 80%;
         line-height: 1.5;
         text-align: left;
     }
@@ -594,7 +597,8 @@ strong {
     color: #ccc;
 }
 .history .year {
-    margin: 139px 0 0 107px;
+    margin: 139px 0 0 0;
+    left: 107px;
 }
 .history .year .order {
     color: #999;
@@ -629,7 +633,7 @@ strong {
     position: absolute;
     top: 100px;
     left: 0;
-    width: 450%;
+    width: 480%;
     height: 1px;
     background-color: #ccc;
     content: "";
@@ -748,7 +752,8 @@ strong {
 }
 @media screen and (max-width:640px){
     .history {
-        margin: 20px 0 120px 0;
+        padding: 0 0 52px 0;
+        margin: 0;
     }
     .history .tit h2 {
         float: left;
@@ -774,6 +779,7 @@ strong {
     }
     .history .year {
         margin: 0 0 0 20px;
+        left: 0;
     }
     .history .year .order {
         color: #999;
@@ -811,6 +817,9 @@ strong {
         display: inline-block;
         width: auto;
     }
+    .history .year > ul > li > ul.size > li {
+        font-size: 13px;
+    }
 }
 
 
@@ -828,13 +837,13 @@ strong {
 .lineup .poster .flow_l {
     margin: 0 0 23px 0;
     animation-name: flow_l;
-    animation-duration: 30s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 .lineup .poster .flow_r {
     animation-name: flow_r;
-    animation-duration: 30s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -945,7 +954,7 @@ strong {
 }
 @media screen and (max-width:640px){
     .lineup {
-        margin: 0 0 80px 0;
+        padding: 0 0 85px 0;
         height: auto;
     }
     .lineup h2 {
@@ -1216,7 +1225,7 @@ strong {
 }
 @media screen and (max-width:640px){
     .sns {
-        margin: 0 0 230px 0;
+        padding: 0 0 15px 0;
         height: auto;
     }
     .sns h2 {

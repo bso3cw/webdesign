@@ -12,6 +12,7 @@ $(document).ready(function(){
 
     verticalCentered: true, /* 컨텐츠 요소 위아래 가운데 */
 
+	
     afterLoad: function(origin, destination, direction, trigger){
         
         if(destination.index == 0){
@@ -51,19 +52,15 @@ $(document).ready(function(){
 	spaceBetween: 80, /* li와 li사이 - 제일 작은 여백 */
 	breakpoints: {
         320: {  
-            slidesPerView: "auto",
 			spaceBetween: 20, 
 		},
-		640: {  /* 640px 이상이 되면 적용 */
-            slidesPerView: "auto",  
+		640: {   
 			spaceBetween: 40, 
 		},
-		1024: {  /* 1024px 이상이 되면 적용 */
-            slidesPerView: "auto",
+		1024: { 
 			spaceBetween: 40,
 		},
         1440: { 
-            slidesPerView: "auto",
 			spaceBetween: 80,
 		},
 	},
@@ -91,19 +88,15 @@ const swiper_sns = new Swiper(".sns .event", {
     },
     breakpoints: {
         320: {  
-            slidesPerView: "auto",
             spaceBetween: 39, 
         },
         640: {  
-            slidesPerView: "auto",
             spaceBetween: 60, 
         },
         1024: {  
-            slidesPerView: "auto",
             spaceBetween: 65, 
         },
         1440: {  
-            slidesPerView: "auto",
             spaceBetween: 70, 
         },
     },

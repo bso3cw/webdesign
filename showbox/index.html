@@ -48,14 +48,14 @@
             </nav>
         </header>
         <div id="fullpage">
-            <section class="section visual">
+            <section class="section visual" data-anchor="visual">
                 <div class="inner">
                     <h2>창작자에게는 믿음직한 제작 기반과 서비스를<br> 관객에게는 최고의 즐거움을</h2>
                     <ul>
-                        <li><a href="#n"><img src="images/common/sns_facebook.svg" alt="페이스북 로고"></a></li>
-                        <li><a href="#n"><img src="images/common/sns_insta.svg" alt="인스타그램 로고"></a></li>
-                        <li><a href="#n"><img src="images/common/sns_twitter.svg" alt="트위터 로고"></a></li>
-                        <li><a href="#n"><img src="images/common/sns_youtube.svg" alt="유튜브 로고"></a></li>
+                        <li><a href="https://www.facebook.com/Showbox.Movie?_rdc=1&_rdr" target="_blank" title="새 창으로 열림"><img src="images/common/sns_facebook.svg" alt="페이스북 로고"></a></li>
+                        <li><a href="https://www.instagram.com/showbox.movie/" target="_blank" title="새 창으로 열림"><img src="images/common/sns_insta.svg" alt="인스타그램 로고"></a></li>
+                        <li><a href="https://twitter.com/showboxmovie?s=20&t=tRPXniZaIDC4fnwI9dMIvA" target="_blank" title="새 창으로 열림"><img src="images/common/sns_twitter.svg" alt="트위터 로고"></a></li>
+                        <li><a href="https://www.youtube.com/user/SHOWBOXmoive" target="_blank" title="새 창으로 열림"><img src="images/common/sns_youtube.svg" alt="유튜브 로고"></a></li>
                     </ul>
                 </div>
                 <video loop muted data-autoplay playsinline>
@@ -63,7 +63,7 @@
                 </video>
                 <div class="bg"></div>
             </section>
-            <section class="section biz biz1">
+            <section class="section biz biz1" data-anchor="biz1">
                 <div class="wrapper">
                     <div class="pic">
                         <img src="images/main/biz1.png" alt="영화 촬영 스튜디오 사진">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section biz biz2">
+            <section class="section biz biz2" data-anchor="biz2">
                 <div class="wrapper">
                     <div class="pic">
                         <img src="images/main/biz2.png" alt="극장 의자에 앉아 영화를 관람하는 관객들 사진">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section biz biz3">
+            <section class="section biz biz3" data-anchor="biz3">
                 <div class="wrapper">
                     <div class="pic">
                         <img src="images/main/biz3.png" alt="여러 고층 건물들 외벽에 붙어 있는 영화 포스터 사진">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section biz biz4">
+            <section class="section biz biz4" data-anchor="biz4">
                 <div class="wrapper">
                     <div class="pic">
                         <img src="images/main/biz4.png" alt="영화관 의자에 앉아 영화 상영을 기다리는 관객들의 뒷모습 사진">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section history">
+            <section class="section history" data-anchor="history">
                 <div class="tit clearfix">
                     <h2>History</h2>
                     <div class="arrow">
@@ -168,10 +168,10 @@
                         </li>
                         <li class="order swiper-slide">
                             <h3>2015</h3>
-                            <ul>
-                                <li>조선명탐정 : 사라진 놉의 딸 387만명 / 15년 상반기 한국영화 최고 흥행작</li>
+                            <ul class="size">
+                                <li>조선명탐정 : 사라진 놉의 딸 387만명</li>
                                 <li>중국 화이브라더스와 독점 파트너십 체결</li>
-                                <li>(주)미디어플렉스 -> (주)쇼박스 상호명 변경 / 상호와 브랜드 통일</li>
+                                <li>(주)미디어플렉스 -> (주)쇼박스 상호명 변경</li>
                                 <li>암살 1270만명</li>
                                 <li>사도 624만명</li>
                                 <li>블룸하우스, 아이반호와 공동제작 파트너십 체결</li>
@@ -265,7 +265,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="section lineup">
+            <section class="section lineup" data-anchor="lineup">
                 <h2>Lineup</h2>
                 <div class="poster">
                     <div class="flow_l">
@@ -330,7 +330,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section sns">
+            <section class="section sns" data-anchor="sns">
                 <h2>ShowBox SNS</h2>
                 <div class="event swiper">
                     <ul class="swiper-wrapper">
@@ -409,16 +409,13 @@
                     </ul>
                 </div>
             </section>
-            <section class="section fp-auto-height">
-                <footer class="footer">
-                    <button class="top">
-                        <span>TOP</span>
-                        <i class="material-symbols-outlined">vertical_align_top</i>
-                    </button>
+            <footer class="section footer fp-auto-height" data-anchor="footer">
+                <div class="ftop">
                     <div class="fnav">
-                        <ul class="main_f">
+                        <ul class="main_f clearfix">
                             <li>
                                 <a href="#n">About
+                                    <i class="material-symbols-rounded">expand_more</i>
                                     <ul class="sub_f">
                                         <li>쇼박스 소개</li>
                                         <li>윤리경영</li>
@@ -427,6 +424,7 @@
                             </li>
                             <li>
                                 <a href="#n">Films
+                                    <i class="material-symbols-rounded">expand_more</i>
                                     <ul class="sub_f">
                                         <li>Lineup</li>
                                         <li>Now In Theater</li>
@@ -439,6 +437,7 @@
                             </li>
                             <li>
                                 <a href="#n">Contact Us
+                                    <i class="material-symbols-rounded">expand_more</i>
                                     <ul class="sub_f">
                                         <li>공지사항</li>
                                         <li>문의</li>
@@ -448,6 +447,7 @@
                             </li>
                             <li>
                                 <a href="#n">IR
+                                    <i class="material-symbols-rounded">expand_more</i>
                                     <ul class="sub_f">
                                         <li>IR News</li>
                                         <li>공시</li>
@@ -457,36 +457,46 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div class="fbottom">
                     <div class="flogo">
                         <a href="index.html">
                             <img src="images/common/flogo.svg" alt="쇼박스 흑백 로고">
                         </a>
                     </div>
-                    <div class="f_sns">
-                        <ul>
-                            <li><a href=""><img src="images/common/sns_facebook.svg" alt="페이스북 로고"></a></li>
-                            <li><a href=""><img src="images/common/sns_insta.svg" alt="인스타그램 로고"></a></li>
-                            <li><a href=""><img src="images/common/sns_twitter.svg" alt="트위터 로고"></a></li>
-                            <li><a href=""><img src="images/common/sns_youtube.svg" alt="유튜브 로고"></a></li>
-                        </ul>
-                    </div>
-                    <div class="family">
-                        <button class="site">
-                            <span>Family Site</span>
-                            <i class="material-symbols-outlined">add</i>
-                        </button>
+                    <div class="right">
+                        <div class="f_sns">
+                            <ul>
+                                <li><a href="https://www.facebook.com/Showbox.Movie?_rdc=1&_rdr" target="_blank" title="새 창으로 열림"><img src="images/common/sns_facebook_f.svg" alt="페이스북 로고"></a></li>
+                                <li><a href="https://www.instagram.com/showbox.movie/" target="_blank" title="새 창으로 열림"><img src="images/common/sns_insta_f.svg" alt="인스타그램 로고"></a></li>
+                                <li><a href="https://twitter.com/showboxmovie?s=20&t=tRPXniZaIDC4fnwI9dMIvA" target="_blank" title="새 창으로 열림"><img src="images/common/sns_twitter_f.svg" alt="트위터 로고"></a></li>
+                                <li><a href="https://www.youtube.com/user/SHOWBOXmoive" target="_blank" title="새 창으로 열림"><img src="images/common/sns_youtube_f.svg" alt="유튜브 로고"></a></li>
+                            </ul>
+                        </div>
+                        <div class="family">
+                            <button class="site">
+                                <span>Family Site</span>
+                                <i class="material-symbols-outlined">add</i>
+                            </button>
+                        </div>
                     </div>
                     <div class="finfo">
-                        <ul>
+                        <ul class="clearfix">
                             <li><a href="#n">이용약관</a></li>
                             <li><a href="#n">개인정보 처리방침</a></li>
                         </ul>
                     </div>
-                    <div class="address">(06054) 서울특별시 강남구 도산대로 310(논현동) 916빌딩</div>
-                    <div class="copyright">COPYRIGHT ⓒ SHOWBOX ALL RIGHTS RESERVED</div>
-                </footer>
-            </section>
+                    <div class="address"><span>(06054) 서울특별시 강남구 도산대로 310(논현동) 916빌딩</span></div>
+                    <div class="copyright"><span>COPYRIGHT ⓒ SHOWBOX ALL RIGHTS RESERVED</span></div>
+                </div>
+            </footer>
         </div>
+        <aside class="top">
+            <a href="#visual">
+                <span>TOP</span>
+                <i class="material-symbols-outlined">vertical_align_top</i>
+            </a>
+        </aside>
     </div>
 </body>
 </html>
