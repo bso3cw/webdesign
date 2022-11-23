@@ -87,6 +87,7 @@ html, body {
 .header.fixed {
     background-color: #fff;
     color: #1d1d1d;
+    -webkit-transform: translate3d(0,0,0);
 }
 .header .logo {
     float: left;
