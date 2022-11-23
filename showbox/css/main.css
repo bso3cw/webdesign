@@ -836,14 +836,16 @@ strong {
 }
 .lineup .poster .flow_l {
     margin: 0 0 23px 0;
+}
+.lineup .poster .flow_l ul {
     animation-name: flow_l;
-    animation-duration: 20s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.lineup .poster .flow_r {
+.lineup .poster .flow_r ul {
     animation-name: flow_r;
-    animation-duration: 20s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -851,6 +853,7 @@ strong {
     white-space: nowrap;
     font-size: 0;
     line-height: 0;
+    display: inline-block;
 }
 .lineup .poster ul li {
     display: inline-block;
@@ -963,14 +966,16 @@ strong {
     }
     .lineup .poster .flow_l {
         margin: 0 0 10px 0;
+    }
+    .lineup .poster .flow_l ul {
         animation-name: flow_l;
-        animation-duration: 20s;
+        animation-duration: 60s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
-    .lineup .poster .flow_r {
+    .lineup .poster .flow_r ul {
         animation-name: flow_r;
-        animation-duration: 20s;
+        animation-duration: 60s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
