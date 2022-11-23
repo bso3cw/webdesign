@@ -87,7 +87,6 @@ html, body {
 .header.fixed {
     background-color: #fff;
     color: #1d1d1d;
-    z-index: 300;
 }
 .header .logo {
     float: left;
@@ -105,11 +104,10 @@ html, body {
     background-image: url(../images/common/logo.svg);
 }
 .header .gnb {
-    float: left;
-}
-.header .gnb .menu {
     position: absolute;
-    left: 30%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 .header .gnb .menu li {
     float: left;
@@ -328,13 +326,17 @@ html, body {
         height: 25px;
     }
     .header .gnb {
-        float: none;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: translateX(0);
+        float: right;
     }
     .header .gnb .menu {
         display: none;
     }
     .header .search {
-        float: none;
+        float: right;
         margin: 10px 51px 0 0;
         position: absolute;
         right: 0;
