@@ -29,6 +29,10 @@ html, body {
        1400px이 콘텐츠 영역인데 왼쪽 20px + 오른쪽  20px = 1440px이 넓이
        padding으로 좌우에 여백을 20px씩 줌 */
 }
+.element {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+ }
 @media screen and (max-width:1000px){
     html, body {
     font-size: 14px;
@@ -87,7 +91,6 @@ html, body {
 .header.fixed {
     background-color: #fff;
     color: #1d1d1d;
-    -webkit-transform: translate3d(0,0,0);
 }
 .header .logo {
     float: left;
