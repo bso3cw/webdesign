@@ -46,10 +46,7 @@ html, body {
 .cnt_wrap {
     position: relative;
 }
-svg {
-    width: 100%;
-    height: 100%;
-}
+
 .skip_nav {
     position: absolute;
     left: 0;
@@ -509,6 +506,10 @@ aside.top a i {
 }
 .footer .f_sns ul li:last-child {
     margin-right: 0;
+}
+.footer .f_sns ul li a img {
+    width: 100%;
+    height: 100%;
 }
 .footer .family {
     float: right;
